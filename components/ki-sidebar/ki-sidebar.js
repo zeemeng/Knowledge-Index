@@ -1,5 +1,7 @@
 import Component from "../../lib/Component.js";
 import store from "../../store/store.js";
+import getPageScrollRatio from "../utils/getPageScrollRatio.js";
+import scrollPageByRatio from "../utils/scrollPageByRatio.js";
 
 export class KiSidebar extends Component {
   static tagName = "ki-sidebar";
@@ -10,15 +12,15 @@ export class KiSidebar extends Component {
   ];
 
   static template = `
+  <svg class="sidebar-show-control" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <title>Show Sidebar</title>
+    <path
+      d="M9.2571 11.1825V6.8679H21.0114V4.95028H9.2571V0.635653L3.98366 5.90909L9.2571 11.1825ZM0.272727 11.1648H2.19034V0.653409H0.272727V11.1648Z"
+      fill="black"
+      fill-opacity="0.25"
+    />
+  </svg>
   <aside class="sidebar">
-    <svg class="sidebar-show-control" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <title>Show Sidebar</title>
-      <path
-        d="M9.2571 11.1825V6.8679H21.0114V4.95028H9.2571V0.635653L3.98366 5.90909L9.2571 11.1825ZM0.272727 11.1648H2.19034V0.653409H0.272727V11.1648Z"
-        fill="black"
-        fill-opacity="0.25"
-      />
-    </svg>
     <div class="sidebar-controls flex-column">
       <svg class="sidebar-hide-control" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>Hide Sidebar</title>
@@ -67,10 +69,14 @@ export class KiSidebar extends Component {
   constructor() {
     super();
     this.shadowRoot.querySelector(".sidebar-show-control").onclick = () => {
+      const ratio = getPageScrollRatio();
       this.classList.add("active");
+      scrollPageByRatio(ratio, 200);
     };
     this.shadowRoot.querySelector(".sidebar-hide-control").onclick = () => {
+      const ratio = getPageScrollRatio();
       this.classList.remove("active");
+      scrollPageByRatio(ratio, 200);
     };
   }
 
