@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+slot {
+  margin: 2rem 0;
+  display: block;
+}
+
+.title-container {
+  display: flex;
+}
+
+:host([level="1"]) .title-container {
+  justify-content: center;
+}
+
+a.topic-title {
+  color: inherit;
+}
+
+:host([level="1"]) .topic-title {
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+:host([level="2"]) .topic-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+:host([level="3"]) .topic-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+:host([level="4"]) .topic-title {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.topic-title:hover {
+  text-decoration-color: var(--grey-1);
+  text-decoration-thickness: 1px;
+}
+
+.topic-title:hover::after {
+  content: "#";
+  color: var(--grey-1);
+  margin-left: 0.5em;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+}
+
+/* For separator feature */
+
+/* 
+.separator {
+  margin-bottom: 4rem;
+}
+
+.symbol {
+  color: var(--grey-1);
+  margin: 0 2rem;
+  font-size: 26px;
+}
+
+.line {
+  width: 30%;
+  height: 1px;
+  background-color: var(--grey-1);
+}
+*/

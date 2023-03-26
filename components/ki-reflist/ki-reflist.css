@@ -1,0 +1,26 @@
+.ref {
+  font-size: 14px;
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
+  margin: 2rem 0;
+  padding: 2em;
+
+  background: var(--bg-grey);
+  border-radius: 6px;
+}
+
+.ref > div:first-child {
+  font-weight: 500;
+}
+
+.ref > ol {
+  padding-left: 3em;
+}
+
+.ref > ol > div {
+  margin-top: 2em;
+}
+
+.ref > ol > div:first-child {
+  margin-top: 1em;
+}

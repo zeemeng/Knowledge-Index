@@ -1,0 +1,107 @@
+/** GLOSSARY PAGE SECTION **/
+
+.glossary-select-control > div {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.glossary-select-control button {
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.glossary-select-control button.active {
+  color: var(--blue-1);
+}
+
+.glossary-select-control button:hover {
+  text-decoration: underline 2px var(--blue-2);
+  text-underline-position: under;
+  color: var(--blue-2);
+  text-underline-offset: 3px;
+}
+
+.glossary-sections {
+  min-height: calc(100vh - 300px);
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.glossary-sections > * {
+  border: 1px solid rgba(0, 0, 0, 0);
+  /* border: 1px solid var(--border-light); */
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 0.75em;
+  margin: 0.75em;
+  cursor: pointer;
+  transition: 100ms;
+  color: var(--text-dark);
+  text-align: center;
+  box-shadow: 0 3px 15px 3px var(--border-light);
+  padding: 0.85em;
+  margin: 0.85em;
+  text-decoration: none;
+}
+
+.glossary-sections > *:hover {
+  border: 1px solid rgba(0, 112, 243, 0.3);
+  box-shadow: 0 0 15px -5px var(--blue-1);
+  color: var(--blue-2);
+}
+
+.glossary-sections > *:active {
+  background-color: var(--blue-2);
+  color: #fff;
+  transition: none;
+}
+
+.glossary-index {
+  /* align-items: flex-start; */
+  margin-top: calc(2rem + 10px);
+  columns: 300px;
+  column-gap: 2.5em;
+}
+
+.glossary-index > *:first-child {
+  margin-top: 0;
+}
+
+/* .glossary-index > .index-col:first-child {
+  padding-left: 0;
+} */
+
+/* .index-col {
+  padding-left: 20px;
+} */
+
+/* .index-col > *:first-child {
+  margin-top: 0;
+} */
+
+.index-entry {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-top: 10px;
+  cursor: pointer;
+  /* transition: color 50ms; */
+  display: block;
+  color: var(--text-dark);
+}
+
+.index-entry:hover {
+  color: var(--blue-1);
+}
+
+.index-heading {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 1em;
+  margin-bottom: 15px;
+}

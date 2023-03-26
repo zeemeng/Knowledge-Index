@@ -1,0 +1,21 @@
+:host {
+  cursor: pointer;
+}
+
+:host {
+  color: var(--blue-1);
+  text-decoration: none;
+}
+
+:host(:hover) {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-skip-ink: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  text-underline-position: inherit;
+  text-decoration-skip-ink: inherit;
+}

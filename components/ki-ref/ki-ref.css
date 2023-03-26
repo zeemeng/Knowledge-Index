@@ -1,0 +1,15 @@
+li {
+  margin-top: 1em;
+}
+
+li:first-child {
+  margin-top: 0;
+}
+
+li > div {
+  margin-left: 1em;
+}
+
+li > a.none ~ div {
+  margin-left: 0;
+}

@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--text-font);
+}
+
+a {
+  color: var(--blue-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-skip-ink: none;
+}
+
+a.h1,
+a.h2,
+a.h3,
+a.h4,
+.sidebar-toc a,
+.topic-toc a,
+.dropdown-content a,
+.glossary-sections a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.none {
+  display: none;
+}

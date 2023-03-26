@@ -1,0 +1,19 @@
+.topic-toc {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  /* border: 1px solid var(--border-light); */
+  border-radius: var(--border-radius-standard);
+  padding: 30px 60px;
+  /* line-height: 1.35; */
+}
+
+.topic-toc * {
+  color: inherit;
+}
+
+.topic-toc-heading {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  display: block;
+  font-weight: 700;
+}

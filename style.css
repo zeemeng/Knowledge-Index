@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --bg-dark: #1d1f21; /* code block bg */
+  --bg-grey: #fafafa; /* inline code bg; ref-list bg */
+  --bg-light: #ffffff;
+  --border-light: #eaeaea;
+  --grey-1: #bbbbbb;
+  --grey-2: #c4c4c4;
+  --blue-1: #0070f3;
+  --blue-2: rgba(0, 112, 243, 0.75);
+  --text-dark: #000000;
+  --text-light: #f8f8f2; /* block code bg */
+  --text-accent-1: #d400ff; /* inline code font */
+  --text-accent-2: #ff6000; /* .cite */
+  --text-accent-3: #53b579; /* block code comment font */
+
+  --comment-1: #999;
+  --comment-2: #62c05d;
+  --comment-3: #53b579;
+  --comment-4: #74ce96;
+  --comment-5: #6fc599;
+  --comment-6: #98e4d3;
+  --comment-7: #3acaab;
+
+  --inline-code-color: var(--text-accent-1);
+  --inline-code-bg: var(--bg-grey);
+  --block-code-color: var(--text-light);
+  --block-code-bg: var(--bg-dark);
+  --block-code-comment-color: var(--text-accent-3);
+
+  --body-line-height: 1.6;
+  --text-font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --code-font: Menlo, "Ubuntu Mono", "DejaVu Sans Mono", "Liberation Mono", monospace, serif;
+
+  --navbar-height: 85px;
+  --sidebar-min-width: 285px;
+  --sidebar-controls-height: 135px;
+  --border-radius-standard: 8px;
+
+  --container-width: 90%;
+  --container-max-width: 1050px;
+  --container-margin: auto;
+  --container-padding: 0 1.5rem;
+}
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--text-font);
+}
+
+html {
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  line-height: var(--body-line-height);
+  overflow-wrap: anywhere;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table caption {
+  margin-bottom: 0.5em;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+/* Code elements */
+
+.inline {
+  font-family: var(--code-font);
+  color: var(--inline-code-color);
+}
+
+.code {
+  background-color: var(--block-code-bg);
+  color: var(--block-code-color);
+  font-family: var(--code-font);
+  border-radius: 8px;
+  padding: 2em;
+  margin: 20px 0;
+  white-space: pre-wrap;
+}
+
+.code * {
+  font-family: var(--code-font);
+}
+
+.comment {
+  color: #92c32f;
+  color: #80b552;
+  color: #55b552;
+  color: var(--block-code-comment-color);
+}

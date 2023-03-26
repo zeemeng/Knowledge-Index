@@ -1,0 +1,30 @@
+ki-topic p,
+ki-topic > div {
+  margin: 1.5rem 0;
+}
+
+ki-topic ul,
+ki-topic ol {
+  padding-left: revert;
+}
+
+ki-topic ul li,
+ki-topic ol li {
+  margin: 1rem 0;
+}
+
+ki-topic {
+  margin-top: 6rem;
+}
+
+ki-topic[level="1"] {
+  margin-top: 9rem;
+}
+
+/* For separator feature */
+
+/* 
+ki-topic[level="1"] {
+  margin-top: 5rem;
+}
+*/

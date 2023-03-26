@@ -1,0 +1,30 @@
+main.flex {
+  min-height: 100vh;
+  align-items: flex-start;
+
+  width: var(--container-width);
+  max-width: var(--container-max-width);
+  margin: var(--container-margin);
+  padding: var(--container-padding);
+}
+
+.main-content {
+  width: 100%;
+  max-width: none;
+  margin-top: var(--navbar-height);
+  padding: 3.5rem 0;
+  padding-left: 0;
+
+  transition: 500ms;
+}
+
+.main-content > *:first-child,
+.main-content .topic:first-child > *:first-child {
+  margin-top: 0;
+}
+
+ki-sidebar.active ~ .main-content {
+  width: 80%;
+  max-width: calc(100% - var(--sidebar-min-width));
+  padding-left: 2rem;
+}
