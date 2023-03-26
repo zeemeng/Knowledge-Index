@@ -8,5 +8,7 @@ export { KiTopic } from "./ki-topic/ki-topic.js";
 export { KiReflist } from "./ki-reflist/ki-reflist.js";
 export { KiRef } from "./ki-ref/ki-ref.js";
 export { KiToc } from "./ki-toc/ki-toc.js";
-import { KiTocEntry } from "./ki-toc-entry/ki-toc-entry.js";
+export { KiTocEntry } from "./ki-toc-entry/ki-toc-entry.js";
+export { KiCite } from "./ki-cite/ki-cite.js";
+export { KiIcode } from "./ki-icode/ki-icode.js";
 import updatePage from "./navigation-module/navigation-module.js";
