@@ -83,11 +83,6 @@ table td {
 
 /* Code elements */
 
-.inline {
-  font-family: var(--code-font);
-  color: var(--inline-code-color);
-}
-
 .code {
   background-color: var(--block-code-bg);
   color: var(--block-code-color);

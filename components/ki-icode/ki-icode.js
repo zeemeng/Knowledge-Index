@@ -8,7 +8,6 @@ export class KiIcode extends Component {
     font-family: var(--code-font);
     color: var(--inline-code-color);
     background-color: var(--inline-code-bg);
-    border-radius: 4px;
     padding: 0.2rem 0.6rem;
   }
   `;
