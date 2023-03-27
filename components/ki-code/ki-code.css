@@ -5,8 +5,8 @@ pre {
   color: var(--block-code-color);
   font-family: var(--code-font);
   border-radius: 8px;
-  padding: 2em;
-  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
   white-space: pre-wrap;
 }
 
