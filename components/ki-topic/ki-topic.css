@@ -56,6 +56,13 @@ a.topic-title {
   position: absolute;
 }
 
+.updated {
+  text-align: end;
+  color: var(--grey-1);
+  /* color: var(--grey-2); */
+  /* font-size: 0.85rem; */
+}
+
 /* For separator feature */
 
 /* 

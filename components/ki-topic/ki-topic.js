@@ -8,6 +8,7 @@ export class KiTopic extends Component {
   <div class="title-container">
     <a class="topic-title"></a>
   </div>
+  <div class="updated none">Updated <span class="moment"></span></div>
   <slot></slot>
   `;
 
@@ -31,7 +32,7 @@ export class KiTopic extends Component {
 
   static lightDOMStyleSheetPaths = "components/ki-topic/ki-topic.light-dom.css";
 
-  static observedAttributes = ["name", "long-name", "id"];
+  static observedAttributes = ["name", "long-name", "id", "updated"];
 
   static init = this.initClass();
 
@@ -55,6 +56,12 @@ export class KiTopic extends Component {
     while (titleAnchor.firstChild) titleAnchor.firstChild.remove();
     titleAnchor.append(...parsedTitle);
     titleAnchor.setAttribute("href", "#" + this.id);
+
+    const updated = this.getAttribute("updated");
+    if (updated !== null && updated !== "") {
+      this.shadowRoot.querySelector(".moment").textContent = updated;
+      this.shadowRoot.querySelector(".updated").classList.remove("none");
+    } else this.shadowRoot.querySelector(".updated").classList.add("none");
 
     /* For separator feature */
     // if (this.getAttribute("level") === "1")
