@@ -21,11 +21,6 @@ export class KiRef extends Component {
 
   static init = this.initClass();
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue === newValue) return;
-    this.render();
-  }
-
   render() {
     const anchor = this.shadowRoot.querySelector("a");
     const link = this.getAttribute("link");

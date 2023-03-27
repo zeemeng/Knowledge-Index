@@ -35,11 +35,6 @@ export class KiTopic extends Component {
 
   static init = this.initClass();
 
-  attributeChangedCallback(attributeName, oldValue, newValue) {
-    if (oldValue === newValue) return;
-    this.render();
-  }
-
   connectedCallback() {
     let level = 1;
     let currentElement = this.parentElement;
