@@ -28,3 +28,11 @@ ki-sidebar.active ~ .main-content {
   max-width: calc(100% - var(--sidebar-min-width));
   padding-left: 2rem;
 }
+
+@media (max-width: 768px) {
+  ki-sidebar.active ~ .main-content {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+  }
+}
