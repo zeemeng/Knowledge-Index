@@ -5,7 +5,9 @@ import { KiTopic } from "../ki-topic/ki-topic.js";
 export class KiToc extends Component {
   static tagName = "ki-toc";
 
-  static template = ``;
+  static styleSheetPaths = "components/ki-toc/ki-toc.css";
+
+  static template = `<div></div>`;
 
   static observedAttributes = ["section"];
 
@@ -14,7 +16,8 @@ export class KiToc extends Component {
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue) return;
 
-    while (this.shadowRoot.firstChild) this.shadowRoot.firstChild.remove();
+    const container = this.shadowRoot.querySelector("div");
+    while (container.firstChild) container.firstChild.remove();
     const sectionElement = document.getElementById(newValue);
     if (!sectionElement) return;
 
@@ -22,7 +25,7 @@ export class KiToc extends Component {
     tocEntries = tocEntries.map(node => this.recursivelyPopulateTocEntries(node, newValue));
     tocEntries = tocEntries.filter(entry => entry !== null);
 
-    this.shadowRoot.append(...tocEntries);
+    container.append(...tocEntries);
   }
 
   recursivelyPopulateTocEntries(node, sectionPath) {

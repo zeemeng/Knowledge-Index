@@ -13,3 +13,7 @@
   margin-top: 12px;
   margin-left: 48px;
 } */
+
+:host {
+  font-weight: 500;
+}
