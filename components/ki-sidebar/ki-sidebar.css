@@ -81,6 +81,10 @@ aside.sidebar {
   padding-top: 7px;
 }
 
+.sidebar-search-control * {
+  cursor: not-allowed;
+}
+
 .sidebar-search-input {
   width: calc(100% - 40px);
   height: 40px;
@@ -126,6 +130,16 @@ aside.sidebar {
 .filter-by-section,
 .filter-by-all {
   cursor: pointer;
+
+  cursor: not-allowed;
+}
+
+.filter-by-section:hover,
+.filter-by-all:hover {
+  text-decoration: underline 2px var(--blue-2);
+  text-underline-position: under;
+  color: var(--blue-2);
+  text-underline-offset: 3px;
 }
 
 .sidebar-toc {
@@ -175,7 +189,8 @@ ki-toc {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   }
 
-  aside.sidebar {
+  .sidebar-controls,
+  .sidebar-content {
     padding: 0 1.5rem;
   }
 

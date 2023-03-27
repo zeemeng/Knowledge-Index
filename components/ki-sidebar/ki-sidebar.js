@@ -31,7 +31,7 @@ export class KiSidebar extends Component {
         />
       </svg>
       <form class="sidebar-search-control flex">
-        <input class="sidebar-search-input" type="text" placeholder="Search..." />
+        <input class="sidebar-search-input" type="text" placeholder="Does not work currently..." />
         <button class="sidebar-search-submit flex" type="submit">
           <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="6.58444" cy="6.58444" r="6.58444" fill="white"/>
