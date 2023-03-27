@@ -1,27 +1,24 @@
 import Component from "../../lib/Component.js";
 
-const allowedTypes = {
-  text: "text",
-  html: "html"
-};
+export class KiCode extends Component {
+  static tagName = "ki-code";
 
-export class KiLoad extends Component {
-  static tagName = "ki-load";
+  static styleSheetPaths = [
+    "components/ki-common-styles/ki-common-styles.css",
+    "components/ki-code/ki-code.css"
+  ];
+
+  static template = "<pre><code></code></pre>";
 
   static init = this.initClass();
 
   async connectedCallback() {
-    const type = this.getAttribute("type");
     const path = this.getAttribute("path");
     const retry = parseInt(this.getAttribute("retry")) || 3;
-
-    if (!type || !path)
+    if (!path)
       return console.error(
-        "Attributes 'type' and 'path' must both be set with appropriate values before the 'ki-load' element is connected to the DOM tree."
+        'The "path" attribute must be set before the "ki-code" element is connected to the DOM tree.'
       );
-
-    if (!allowedTypes.hasOwnProperty(type))
-      return console.error(`"${type}" is not an allowed value for the "type" attribute.`);
 
     const uri = new URL(window.location.origin + path);
     let payload;
@@ -41,13 +38,6 @@ export class KiLoad extends Component {
       return console.error(`Failed to load resource from path "${path}" after ${retry} attempts.`);
     }
 
-    if (type === allowedTypes.text) {
-      const node = document.createTextNode(payload);
-      this.replaceWith(node);
-    }
-
-    if (type === allowedTypes.html) {
-      this.outerHTML = payload;
-    }
+    this.shadowRoot.querySelector("code").textContent = payload;
   }
 }

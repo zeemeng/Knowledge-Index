@@ -80,26 +80,3 @@ table td {
   border: 1px solid #ccc;
   padding: 0.5em;
 }
-
-/* Code elements */
-
-.code {
-  background-color: var(--block-code-bg);
-  color: var(--block-code-color);
-  font-family: var(--code-font);
-  border-radius: 8px;
-  padding: 2em;
-  margin: 20px 0;
-  white-space: pre-wrap;
-}
-
-.code * {
-  font-family: var(--code-font);
-}
-
-.comment {
-  color: #92c32f;
-  color: #80b552;
-  color: #55b552;
-  color: var(--block-code-comment-color);
-}

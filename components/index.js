@@ -12,4 +12,5 @@ export { KiTocEntry } from "./ki-toc-entry/ki-toc-entry.js";
 export { KiCite } from "./ki-cite/ki-cite.js";
 export { KiIcode } from "./ki-icode/ki-icode.js";
 export { KiLoad } from "./ki-load/ki-load.js";
+export { KiCode } from "./ki-code/ki-code.js";
 import updatePage from "./navigation-module/navigation-module.js";
