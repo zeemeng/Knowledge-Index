@@ -80,3 +80,15 @@ table td {
   border: 1px solid #ccc;
   padding: 0.5em;
 }
+
+@media (max-height: 800px) {
+  :root {
+    --navbar-height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --container-padding: 0 10px;
+  }
+}

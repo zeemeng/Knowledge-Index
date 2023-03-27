@@ -57,10 +57,27 @@ a.topic-title {
 }
 
 .updated {
+  margin-top: 0.5rem;
   text-align: end;
   color: var(--grey-1);
   /* color: var(--grey-2); */
   /* font-size: 0.85rem; */
+}
+
+@media (max-width: 768px) {
+  :host([level="1"]) .topic-title {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 576px) {
+  :host([level="1"]) .topic-title {
+    font-size: 30px;
+  }
+
+  :host([level="2"]) .topic-title {
+    font-size: 25px;
+  }
 }
 
 /* For separator feature */

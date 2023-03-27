@@ -106,3 +106,29 @@ nav {
 .dropdown-content > .active {
   color: var(--blue-1);
 }
+
+@media (max-height: 800px) {
+  nav .logo {
+    font-size: 19px;
+  }
+
+  nav .nav-title {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .nav-title {
+    display: none;
+  }
+
+  nav .container.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  nav .dropdown-content {
+    flex-direction: column;
+  }
+}

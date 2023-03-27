@@ -17,3 +17,23 @@
   display: block;
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .topic-toc {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .topic-toc {
+    padding: 0;
+    padding-bottom: 30px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .topic-toc .topic-toc-heading {
+    font-size: 30px;
+  }
+}
