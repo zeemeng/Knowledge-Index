@@ -63,7 +63,7 @@ export class KiSection extends Component {
 
   disconnectedCallback() {
     this.storeSubscription.unsubscribe();
-    store.dispatch(actionTypes.removeSection, this.state);
+    store.dispatch(actionTypes.removeSection, this.id);
   }
 
   render() {
