@@ -8,7 +8,7 @@ export class KiCode extends Component {
     "components/ki-code/ki-code.css"
   ];
 
-  static template = "<pre><code></code></pre>";
+  static template = `<pre class="none"><code></code></pre>`;
 
   static init = this.initClass();
 
@@ -39,5 +39,6 @@ export class KiCode extends Component {
     }
 
     this.shadowRoot.querySelector("code").textContent = payload;
+    this.shadowRoot.querySelector("pre").classList.remove("none");
   }
 }
