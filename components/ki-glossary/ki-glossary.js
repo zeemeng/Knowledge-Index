@@ -1,5 +1,6 @@
 import Component from "../../lib/Component.js";
 import store from "../../store/store.js";
+import parseNameAttribute from "../utils/parseNameAttribute.js";
 import populateGlossaryIndex from "../utils/populateGlossaryIndex.js";
 
 export class KiGlossary extends Component {
@@ -52,15 +53,16 @@ export class KiGlossary extends Component {
       const dropdownLinks = this.state.sections.reduce((accum, section) => {
         if (section.id === "404" || section.id === "glossary") return accum;
 
-        const path = `/${section.id}`;
-        const title = section.longName ? section.longName : section.name;
-        const textContent = section.name;
+        const kiLink = document.createElement("ki-link");
+        kiLink.setAttribute("path", `/${section.id}`);
+        kiLink.setAttribute("title", section.longName ? section.longName : section.name);
+        kiLink.append(parseNameAttribute(section.name));
 
-        accum.push(`<ki-link path="${path}" title="${title}">${textContent}</ki-link>`);
+        accum.push(kiLink);
         return accum;
       }, []);
 
-      this.shadowRoot.querySelector(".glossary-sections").innerHTML = dropdownLinks.join("");
+      this.shadowRoot.querySelector(".glossary-sections").replaceChildren(...dropdownLinks);
     }
 
     // Populate the glossary index

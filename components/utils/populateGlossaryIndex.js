@@ -1,4 +1,4 @@
-import parseKiTopicName from "./parseKiTopicName.js";
+import parseNameAttribute from "./parseNameAttribute.js";
 
 export default function populateGlossaryIndex(glossaryComponent) {
   // Helper functions for generation of glossary index content
@@ -15,7 +15,7 @@ export default function populateGlossaryIndex(glossaryComponent) {
     const link = document.createElement("ki-link");
 
     const name = section.getAttribute("long-name")?.trim() || section.getAttribute("name")?.trim();
-    link.append(...parseKiTopicName(name));
+    link.append(parseNameAttribute(name));
     link.plainName = name.replace(/\*\*(.+?)\*\*/g, "$1");
 
     link.setAttribute("path", "/" + section.id);
@@ -26,7 +26,7 @@ export default function populateGlossaryIndex(glossaryComponent) {
       const link = document.createElement("ki-link");
 
       const name = topic.getAttribute("long-name")?.trim() || topic.getAttribute("name")?.trim();
-      link.append(...parseKiTopicName(name));
+      link.append(parseNameAttribute(name));
       link.plainName = name.replace(/\*\*(.+?)\*\*/g, "$1");
 
       link.setAttribute("path", "/" + section.id + "#" + topic.id);

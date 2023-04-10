@@ -1,6 +1,7 @@
 import Component from "../../lib/Component.js";
 import { actionTypes } from "../../store/actions.js";
 import store from "../../store/store.js";
+import parseNameAttribute from "../utils/parseNameAttribute.js";
 
 export class KiNavbar extends Component {
   static tagName = "ki-navbar";
@@ -64,20 +65,23 @@ export class KiNavbar extends Component {
       const dropdownLinks = this.state.sections.reduce((accum, section) => {
         if (section.id === "404") return accum;
 
-        const path = `/${section.id}`;
-        const title = section.longName ? section.longName : section.name;
-        const textContent = section.name;
+        const kiLink = document.createElement("ki-link");
+        kiLink.setAttribute("path", `/${section.id}`);
+        kiLink.setAttribute("title", section.longName ? section.longName : section.name);
+        kiLink.append(parseNameAttribute(section.name));
 
-        accum.push(`<ki-link path="${path}" title="${title}">${textContent}</ki-link>`);
+        accum.push(kiLink);
         return accum;
       }, []);
 
-      this.shadowRoot.querySelector(".dropdown-content").innerHTML = dropdownLinks.join("");
+      this.shadowRoot.querySelector(".dropdown-content").replaceChildren(...dropdownLinks);
     }
 
     if (this.state.activeSection !== this.previousState.activeSection) {
       const { longName, name } = this.state.activeSection;
-      this.shadowRoot.querySelector(".nav-title").textContent = longName || name || "";
+      this.shadowRoot
+        .querySelector(".nav-title")
+        .replaceChildren(parseNameAttribute(longName || name || ""));
     }
   };
 }

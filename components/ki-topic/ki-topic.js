@@ -1,5 +1,5 @@
 import Component from "../../lib/Component.js";
-import parseKiTopicName from "../utils/parseKiTopicName.js";
+import parseNameAttribute from "../utils/parseNameAttribute.js";
 
 export class KiTopic extends Component {
   static tagName = "ki-topic";
@@ -49,12 +49,12 @@ export class KiTopic extends Component {
   }
 
   render() {
-    const parsedTitle = parseKiTopicName(
+    const parsedTitle = parseNameAttribute(
       this.getAttribute("long-name") || this.getAttribute("name")
     );
     const titleAnchor = this.shadowRoot.querySelector(".topic-title");
     while (titleAnchor.firstChild) titleAnchor.firstChild.remove();
-    titleAnchor.append(...parsedTitle);
+    titleAnchor.replaceChildren(parsedTitle);
     titleAnchor.setAttribute("href", "#" + this.id);
 
     const updated = this.getAttribute("updated");

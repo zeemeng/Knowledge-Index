@@ -1,5 +1,5 @@
 import Component from "../../lib/Component.js";
-import parseKiTopicName from "../utils/parseKiTopicName.js";
+import parseNameAttribute from "../utils/parseNameAttribute.js";
 
 export class KiTocEntry extends Component {
   static tagName = "ki-toc-entry";
@@ -37,7 +37,7 @@ export class KiTocEntry extends Component {
     if (attribName === "path")
       this.shadowRoot.querySelector("ki-link").setAttribute("path", newValue);
     if (attribName === "name")
-      this.shadowRoot.querySelector("ki-link").append(...parseKiTopicName(newValue));
+      this.shadowRoot.querySelector("ki-link").replaceChildren(parseNameAttribute(newValue));
   }
 
   connectedCallback() {
