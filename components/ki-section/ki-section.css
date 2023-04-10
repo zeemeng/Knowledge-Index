@@ -18,6 +18,11 @@
   font-weight: 700;
 }
 
+.topic-toc-heading:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
 @media (max-width: 768px) {
   .topic-toc {
     padding: 20px 40px;

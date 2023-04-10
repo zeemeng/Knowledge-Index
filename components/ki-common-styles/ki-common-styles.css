@@ -16,17 +16,6 @@ a:hover {
   text-decoration-skip-ink: none;
 }
 
-a.h1,
-a.h2,
-a.h3,
-a.h4,
-.sidebar-toc a,
-.topic-toc a,
-.dropdown-content a,
-.glossary-sections a {
-  text-decoration: none;
-}
-
 button {
   cursor: pointer;
 }
@@ -35,13 +24,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.flex-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .none {

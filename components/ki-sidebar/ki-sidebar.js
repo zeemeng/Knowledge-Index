@@ -21,7 +21,7 @@ export class KiSidebar extends Component {
     />
   </svg>
   <aside class="sidebar">
-    <div class="sidebar-controls flex-column">
+    <div class="sidebar-controls">
       <svg class="sidebar-hide-control" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>Hide Sidebar</title>
         <path
