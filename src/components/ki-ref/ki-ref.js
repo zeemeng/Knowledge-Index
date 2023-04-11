@@ -4,8 +4,8 @@ export class KiRef extends Component {
   static tagName = "ki-ref";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-ref/ki-ref.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-ref/ki-ref.css"
   ];
 
   static template = `

@@ -4,8 +4,8 @@ export class KiReflist extends Component {
   static tagName = "ki-reflist";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-reflist/ki-reflist.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-reflist/ki-reflist.css"
   ];
 
   static template = `

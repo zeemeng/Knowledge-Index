@@ -5,7 +5,7 @@ import { KiTopic } from "../ki-topic/ki-topic.js";
 export class KiToc extends Component {
   static tagName = "ki-toc";
 
-  static styleSheetPaths = "components/ki-toc/ki-toc.css";
+  static styleSheetPaths = "/src/components/ki-toc/ki-toc.css";
 
   static template = `<div></div>`;
 

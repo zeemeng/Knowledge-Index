@@ -7,8 +7,8 @@ export class KiSidebar extends Component {
   static tagName = "ki-sidebar";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-sidebar/ki-sidebar.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-sidebar/ki-sidebar.css"
   ];
 
   static template = `

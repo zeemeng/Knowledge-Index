@@ -7,8 +7,8 @@ export class KiSection extends Component {
   static tagName = "ki-section";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-section/ki-section.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-section/ki-section.css"
   ];
 
   static template = `

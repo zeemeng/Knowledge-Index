@@ -4,8 +4,8 @@ export class KiCode extends Component {
   static tagName = "ki-code";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-code/ki-code.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-code/ki-code.css"
   ];
 
   static template = `<pre class="none"><code></code></pre>`;

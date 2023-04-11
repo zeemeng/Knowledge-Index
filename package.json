@@ -1,0 +1,15 @@
+{
+  "name": "ki-dev-server",
+  "version": "1.0.0",
+  "description": "Development server for 'Knowledge-Index' project",
+  "main": "src/dev/server.js",
+  "scripts": {
+    "start": "node src/dev/server.js",
+    "build": "sh netlify-ci.sh"
+  },
+  "author": "zi.han.meng100@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4"
+  }
+}

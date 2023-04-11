@@ -26,11 +26,11 @@ export class KiTopic extends Component {
   // `;
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-topic/ki-topic.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-topic/ki-topic.css"
   ];
 
-  static lightDOMStyleSheetPaths = "components/ki-topic/ki-topic.light-dom.css";
+  static lightDOMStyleSheetPaths = "/src/components/ki-topic/ki-topic.light-dom.css";
 
   static observedAttributes = ["name", "long-name", "id", "updated"];
 

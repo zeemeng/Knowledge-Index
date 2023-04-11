@@ -6,8 +6,8 @@ export class KiMain extends Component {
   static tagName = "ki-main";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-main/ki-main.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-main/ki-main.css"
   ];
 
   static template = `

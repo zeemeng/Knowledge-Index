@@ -5,8 +5,8 @@ export class KiTocEntry extends Component {
   static tagName = "ki-toc-entry";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-toc-entry/ki-toc-entry.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-toc-entry/ki-toc-entry.css"
   ];
 
   static template = `

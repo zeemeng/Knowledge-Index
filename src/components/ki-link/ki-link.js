@@ -4,7 +4,7 @@ import updatePage from "../navigation-module/navigation-module.js";
 export class KiLink extends Component {
   static tagName = "ki-link";
 
-  static styleSheetPaths = "components/ki-link/ki-link.css";
+  static styleSheetPaths = "/src/components/ki-link/ki-link.css";
 
   static template = `<a><slot></slot></a>`;
 

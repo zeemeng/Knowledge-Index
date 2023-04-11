@@ -7,8 +7,8 @@ export class KiNavbar extends Component {
   static tagName = "ki-navbar";
 
   static styleSheetPaths = [
-    "components/ki-common-styles/ki-common-styles.css",
-    "components/ki-navbar/ki-navbar.css"
+    "/src/components/ki-common-styles/ki-component-styles.css",
+    "/src/components/ki-navbar/ki-navbar.css"
   ];
 
   static template = `
