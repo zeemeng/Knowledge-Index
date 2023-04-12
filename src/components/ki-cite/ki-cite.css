@@ -1,0 +1,15 @@
+a {
+  font-size: 0.75em;
+  color: var(--text-accent-2);
+  cursor: default;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a[title]:hover,
+a[href]:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
