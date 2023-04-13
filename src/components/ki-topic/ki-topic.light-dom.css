@@ -21,6 +21,10 @@ ki-topic[level="1"] {
   margin-top: 10rem;
 }
 
+ki-topic > ki-topic:first-child {
+  margin-top: 3.5rem;
+}
+
 /* For separator feature */
 
 /* 

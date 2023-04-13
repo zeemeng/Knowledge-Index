@@ -3,6 +3,8 @@
   "tabWidth": 2,
   "trailingComma": "none",
   "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
   "overrides": [
     {
       "files": "*html",
