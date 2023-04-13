@@ -3,7 +3,7 @@
   "tabWidth": 2,
   "trailingComma": "none",
   "arrowParens": "avoid",
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "htmlWhitespaceSensitivity": "ignore",
   "overrides": [
     {
