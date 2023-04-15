@@ -1,0 +1,418 @@
+<ki-section id="infosec" name="InfoSec" long-name="Information Security">
+  <ki-topic id="password-strength" name="Password Strength">
+    <ki-reflist>
+      <ki-ref link="https://en.wikipedia.org/wiki/Password_strength">About password strength and entropy.</ki-ref>
+      <ki-ref link="https://dropbox.tech/security/zxcvbn-realistic-password-strength-estimation">
+        About the intricacies, assumptions and heuristics involved in the creation of a password strength meter. This article demonstrates the
+        challenge of (somewhat) accurately estimating password/passphrase entropy.
+      </ki-ref>
+      <ki-ref link="https://auth0.com/blog/dont-pass-on-the-new-nist-password-guidelines/">
+        "NIST Password Guidelines and Best Practices for 2020"
+      </ki-ref>
+      <div style="font-weight: 500; margin-left: -3em">Supplementary Ref</div>
+      <ki-ref link="https://resources.infosecinstitute.com/topic/password-security-complexity-vs-length/">
+        About password strength and entropy.
+      </ki-ref>
+    </ki-reflist>
+  </ki-topic>
+  <ki-topic id="crypto-primitives" name="Cryptographic Primitives">
+    <ki-reflist>
+      <ki-ref link="https://en.wikipedia.org/wiki/Cryptographic_primitive">About cryptographic primitives.</ki-ref>
+    </ki-reflist>
+    <ki-topic id="digital-signature" name="Digital Signature">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=s22eJ1eVLTU">
+          <strong>Computerphile</strong> - Hosted by Mike Pound, "What are Digital Signatures?". About the general idea of digital signature.
+        </ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="asymmetric-key-crypto" name="Asymmetric-Key Cryptography">
+      <ki-topic id="RSA" name="Rivest-Shamir-Adleman Cryptosystem (RSA)">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=GSIDS_lvRv4">
+            <strong>Computerphile</strong> - Hosted by Rob Miles, excellent introductory overview of asymmetric-key encryption/decryption.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=rVQpK6NcYIE">
+            <strong>F5 DevCentral</strong> - Excellent explanation of RSA encryption/decryption using a worked-through example.
+          </ki-ref>
+          <ki-ref link="https://stackoverflow.com/questions/16091581/how-many-prime-numbers-are-there-available-for-rsa-encryption">
+            Discussion about the amount of prime numbers that exist within the range that may be used to form RSA encryption-keys of typical sizes and
+            the implication of this subject on the feasibility of attacking RSA with precomputed tables of prime numbers. In summary, for contemporary
+            key sizes ranging from 1024 to 4096 bits, there exist far more usable prime numbers that can be enumerated in any conceivable list.
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="diffie-hellman" name="Diffie-Hellman Key Exchange">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=NmM9HA2MQGI">
+            <strong>Computerphile</strong> - Hosted by Mike Pound; non-mathematical, illustrative demonstration of the Diffie-Hellman key exchange algorithm.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=Yjrfm_oRO0w">
+            <strong>Computerphile</strong> - Hosted by Mike Pound, concise and simplified overview of the mathematical operations involved in the Diffie-Hellman key
+            exchange algorithm.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=pa4osob1XOk&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA&amp;index=23">
+            <strong>F5 DevCentral</strong> - Excellent explanation of the Diffie-Hellman key exchange using a worked-through example.
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="dsa" name="Digital Signature Algorithm (DSA), ECDSA and EdDSA">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=EYOmHSxSOMA">
+            Explanation of the Digital Signature Algorithm (DSA) with a worked-through example.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=PQ8AruHaoLo&amp;list=PL1xkDS1G9As4Yz_te20j1A9evIjt5Z06e">
+            Part 1 of a 5-part video series about the Digital Signature Algorithm with detailed mathematical descriptions and demonstrations.
+          </ki-ref>
+          <ki-ref link="https://en.wikipedia.org/wiki/Digital_Signature_Algorithm">About Digital Signature Algorithm (DSA).</ki-ref>
+          <ki-ref link="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">
+            About Elliptic Curve Digital Signature Algorithm (ECDSA).
+          </ki-ref>
+          <ki-ref link="https://en.wikipedia.org/wiki/EdDSA">About Edwards-curve Digital Signature Algorithm (EdDSA).</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="ecc" name="Elliptic Curve Cryptography">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=NF1pwjL9-DE">
+            <strong>Computerphile</strong> - Hosted by Mike Pound, good overview presentation about elliptic curve cryptography.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=nybVFJVXbww">
+            <strong>Computerphile</strong> - Hosted by Mike Pound, about potential backdoors in certain elliptic curves and certain elliptic curve cryptosystems.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=ulg_AHBOIQU">
+            <strong>Numberphile</strong> - About potential backdoors installed by the NSA in certain standardized elliptic curve cryptosystems.
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+    <ki-topic id="symmetric-key-crypto" name="Symmetric-Key Cryptography">
+      <ki-topic id="chacha" name="ChaCha  Cipher">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=UeIpq-C-GSA"><strong>Computerphile</strong> - Hosted by Mike Pound, about the ChaCha cipher.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="aes" name="Advanced Encryption Standard (AES) / Rijndael Cipher">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=VYech-c5Dic">
+            <strong>Computerphile</strong> - Hosted by Mike Pound, about the origin of the Advanced Encryption Standard (AES) and the context for its emergence.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=O4xNJsjtN6E">
+            <strong>Computerphile</strong> - Hosted by Mike Pound; excellent, detailed explanation of the AES/Rijndael cipher.
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="block-cipher-modes" name="Mode of Operation for Block Ciphers">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=Rk0NIQfEXBA">
+            <strong>Computerphile</strong> - Hosted by Mike Pound, excellent explanation of the concept of mode of operation for block ciphers.
+          </ki-ref>
+          <ki-ref link="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">About modes of operation for block ciphers.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="cryptosystem-security-considerations" name="Security Properties and Considerations of Cryptosystems">
+    <ki-topic id="cryptosystem" name="Cryptosystem">
+      <ki-reflist>
+        <ki-ref link="https://en.wikipedia.org/wiki/Cryptosystem">About cryptosystems.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="authenticated-encryption" name="Authenticated Encryption (AE) and AEAD">
+      <ki-reflist>
+        <ki-ref link="https://en.wikipedia.org/wiki/Authenticated_encryption">
+          About authenticated encryption (AE) and authenticated encryption with associated data (AEAD).
+        </ki-ref>
+        <ki-ref link="https://security.stackexchange.com/questions/179273/what-is-the-purpose-of-associated-authenticated-data-in-aead">
+          Discussion about "What is the purpose of associated authenticated data in AEAD?".
+        </ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="forward-secrecy" name="Forward Secrecy">
+      <ki-reflist>
+        <ki-ref link="https://security.stackexchange.com/questions/33233/ecdh-and-forward-secrecy">
+          Discussion about the relationship between the Diffie-Hellman key exchange (DH) and the property of "forward secrecy". In summary, DH in
+          itself does not guarantee forward secrecy, but the latter feature is achieved when <strong>ephemeral</strong> keys are used.
+        </ki-ref>
+        <ki-ref link="https://en.wikipedia.org/wiki/Forward_secrecy">About forward secrecy.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="cipher-key-sizes" name="About Cipher Key Sizes">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=pgzWxOtk1zg">
+          <strong>Computerphile</strong> - Hosted by Mike Pound, about making judicious choices of cipher key sizes.
+        </ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="cryptosystem-security-considerations-misc" name="Miscellaneous">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=vsXMMT2CqqE">
+          <strong>Computerphile</strong> - Hosted by Mike Pound, about establishing the properties of "authenticity" and "forward secrecy" during a key exchange
+          process.
+        </ki-ref>
+      </ki-reflist>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="pki" name="Public Key Infrastructure (PKI)">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=X9ksxGfVxqk&amp;list=PLA6Ht2dJt3SKN3z4S6nOvuJtesDXbly7S">
+        MIT 6.858 Spring 2020: Computer Systems Security, Lecture 14 - <em>Certificates</em>. Excellent presentation about the entire X.509 public key
+        infrastructure, which includes digital certificates used for SSL/TLS authentication.
+      </ki-ref>
+      <ki-ref link="https://en.wikipedia.org/wiki/Public_key_infrastructure">About public key infrastructure.</ki-ref>
+      <ki-ref link="https://datatracker.ietf.org/doc/html/rfc3647">
+        RFC 3647: <em>Internet X.509 Public Key Infrastructure Certificate Policy and Certification Practices Framework</em>. Informational memo treating
+        important topics that should be covered by definitive certificate policies.
+      </ki-ref>
+    </ki-reflist>
+    <ki-topic id="digital-certificate" name="Digital Certificate">
+      <ki-reflist>
+        <ki-ref link="https://en.wikipedia.org/wiki/Public_key_certificate">About digital certificates.</ki-ref>
+        <ki-ref link="https://datatracker.ietf.org/doc/html/rfc5280">
+          RFC 5280: <em>Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</em>. Specification of the X.509 v3
+          certificate and X.509 v2 certificate revocation list (CRL) as an Internet standards track protocol.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=r1nJT63BFQ0">
+          <strong>Hussein Nasser</strong> - <em>What are SSL/TLS Certificates? Why do we Need them? and How do they Work?</em>. Good short explanation.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=CrWizvX1Pkk">
+          <strong>Hussein Nasser</strong> - <em>TLS Certificates Types - Extended Validation Certificate vs Domain Validated Certificate</em>. Good explanation.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=XmIlynkR8J8&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - About the contents of an X.509 certificate.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=mtyEaXwhBXQ&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - About the issue of "bygone" (i.e. stale) certificate.
+        </ki-ref>
+      </ki-reflist>
+      <ki-topic id="create-sign-certificate-openssl" name="Create and Sign Digital Certificate Using openssl">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=7YgaZIFn7mY">
+            Good tutorial on how to "<em>create &amp; sign SSL/TLS certificates with openssl</em>".
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="certificate-pinning" name="Digital Certificate Pinning">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=3coPpYJgFro"><strong>Hussein Nasser</strong> - About digital certificate pinning.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="tls-ssl" name="Transport Layer Security (TLS/SSL) Protocol">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=QgaSDpj0b1o&amp;list=PLA6Ht2dJt3SKN3z4S6nOvuJtesDXbly7S">
+        MIT 6.858 Spring 2020: Computer Systems Security, Lecture 13 - <em>Secure channels</em>. About the TLS/SSL protocol, vulnerabilities and attacks on old
+        versions of the protocol, as well as security considerations of secure communication channels in general.
+      </ki-ref>
+      <ki-ref link="https://en.wikipedia.org/wiki/Transport_Layer_Security">About TLS/SSL.</ki-ref>
+    </ki-reflist>
+    <ki-topic id="tls-1-2" name="TLS 1.2">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=Rp3iZUvXWlM">Good overview presentation about TLS 1.2.</ki-ref>
+      </ki-reflist>
+      <ki-topic id="tls-1-2-handshake" name="TLS 1.2 Handshake">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=86cQJ0MMses">
+            <strong>Computerphile</strong> - Hosted by Mike Pound, excellent explanation/breakdown of the TLS 1.2 handshake.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=n_d1rCXNrx0&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+            <strong>F5 DevCentral</strong> - Good explanation/breakdown of the TLS 1.2 handshake.
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+    <ki-topic id="tls-1-3" name="TLS 1.3">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=-f4Gbk-U758">Excellent, detailed presentation of the TLS 1.3 protocol.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=VzWqnT5dErI&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - Concise overview of the TLS 1.3 protocol.
+        </ki-ref>
+      </ki-reflist>
+      <ki-topic id="tls-1-3-handshake" name="TLS 1.3 Handshake">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=yPdJVvSyMqk&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+            <strong>F5 DevCentral</strong> - About the TLS 1.3 handshake.
+          </ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+    <ki-topic id="tls-cipher-suite" name="TLS Cipher Suite">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=ZM3tXhPV8v0&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA&amp;index=8">
+          <strong>F5 DevCentral</strong> - About TLS cipher suites.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=k_C2HcJbgMc&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - Strong vs. Weak TLS Ciphers
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=zSQtyW_ywZc"><strong>Hussein Nasser</strong> - Perfect Forward Secrecy in TLS Explained.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="tls-extensions-and-extras" name="TLS Extensions &amp; Extra Features">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=RZt9xdVh9Qk&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - About Mutual TLS.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=vzq2RPYiKL0&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - About the "server name indication" TLS extension .
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=fMFJuuOvfCA&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - About HTTP Strict Transport Security.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=V1h-UZo2Bng&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - About optional features and extensions that enhance TLS transactions' speed and efficiency.
+        </ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="wireshark-tls" name="Wireshark Analysis of TLS">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=06Kq50P01sI"><strong>Hussein Nasser</strong> - Wireshark analysis of TLS 1.2 and TLS 1.3 handshakes.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=u4ht-E-Kihk">Wireshark analysis of TLS 1.2.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="tls-visibility-network-architecture" name="Network Architecture for TLS Visibility">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=-HDzVgX4H-Q"><strong>F5 DevCentral</strong> - <em>The Problem Of TLS Visibility</em>.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=ennae0LqK_I&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - An example of network architecture that solves the issue of TLS/SSL visibility by implementing inline inspection of TLS
+          traffic.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=_O6WlAkd9-s&amp;list=PLyqga7AXMtPMXgn1NwDqnSlgU05cnl4PA">
+          <strong>F5 DevCentral</strong> - An example of network architecture implementing a "proxy" service for TLS/SSL traffic.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=H0bkLsUe3no">
+          <strong>Hussein Nasser</strong> - About the pros and cons of TLS/SSL termination Vs. TLS/SSL forward proxy.
+        </ki-ref>
+      </ki-reflist>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="kerberos" name="Kerberos Protocol">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=QOtA76ga_fY&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh">
+        MIT 6.858 Fall 2014: Computer Systems Security, Lecture 13 - <em>Network Protocols</em>. About the Kerberos authentication/authorization protocol.
+      </ki-ref>
+      <ki-ref link="https://www.youtube.com/watch?v=QN4WmZXi4tg">
+        <strong>Computerphile</strong> - Hosted by Mike Pound, about the benefits and drawbacks of Kerberos.
+      </ki-ref>
+    </ki-reflist>
+  </ki-topic>
+  <ki-topic id="application-security" name="Application Security">
+    <ki-topic id="web-client-security" name="Web Client Security">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=eRJ_r8WF1Y0&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh">
+          MIT 6.858 Fall 2014: Computer Systems Security, Lecture 8 - <em>Web Security Model</em>. About the security model of web browsers and its potential
+          vulnerabilities.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=WlmKwIe9z1Q&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh">
+          MIT 6.858 Fall 2014: Computer Systems Security, Lecture 9 - <em>Securing Web Applications</em>. About specific attacks on web browser-bound client
+          applications.
+        </ki-ref>
+      </ki-reflist>
+      <ki-topic id="xss" name="Cross-site Scripting (XSS)">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=L5l9lSnNMxg"><strong>Computerphile</strong> - Hosted by Tom Scott, XSS explained.</ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=zv0kZKC6GAM"><strong>Tom Scott</strong> - XSS demo.</ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=T1QEs3mdJoc"><strong>Computerphile</strong> - Hosted by Mike Pound, Cookie Stealing using XSS demo.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="sql-injection" name="SQL Injection">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=_jKylhJtPmI"><strong>Computerphile</strong> - Hosted by Tom Scott, SQL injection explained.</ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=ciNHn38EyRc"><strong>Computerphile</strong> - Hosted by Mike Pound, SQL injection attack demo.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+      <ki-topic id="csrf" name="Cross-site Request Forgery (CSRF)">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=vRBihr41JTo">
+            <strong>Computerphile</strong> - Hosted by Tom Scott, cross-site request forgery explained.
+          </ki-ref>
+        </ki-reflist>
+        <ki-topic id="cors" name="CSRF Mitigation: Same-origin Policy &amp; Cross-origin Resource Sharing (CORS)">
+          <ki-reflist>
+            <ki-ref link="https://securityintelligence.com/posts/cors-how-to-use-and-secure-a-cors-policy-with-origin/">CORS explained.</ki-ref>
+            <ki-ref link="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"><em>MDN Web Docs</em> guide on CORS.</ki-ref>
+            <ki-ref link="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy"><em>MDN Web Docs</em> guide on same-origin policy.</ki-ref>
+          </ki-reflist>
+        </ki-topic>
+        <ki-topic id="cors" name="CSRF Mitigation: CSRF Token">
+          <div>
+            CSRF threats may also be mitigated using
+            <em>CSRF tokens</em>
+            which are unique tokens generated by a web server when a client requests a particular resource from the server. After a CSRF token is
+            generated, it is included in the response that the server sends back to the client. If the application protocol used in such a transaction
+            is
+            <em>HTTP</em>
+            , the CSRF token may be included in a response header field (with the exception of "Set-Cookie") or in the response body (e.g. embedded as
+            the value of a hidden field within an HTML form element). Once the client receives the response containing the token, the token may be
+            extracted and stored client-side at some location such as in a variable of the JS environment, in "session storage", in the HTML document
+            etc. However, crucially, the CSRF token should
+            <strong>not</strong>
+            be stored as a cookie, as it would defeat the pupose of such a CSRF mitigation system. Subsequently, when a legitimate request to a
+            protected resource located on server is issued from the client-side application, the latter would be responsible to attach the given CSRF
+            token as part of the request. As such, when the server receives the request, it is able to inspect and validate the included CSRF token,
+            thus distinguishing requests originating from a legitimate client application from those that do not.
+          </div>
+        </ki-topic>
+      </ki-topic>
+      <ki-topic id="topics-in-web-client-security" name="Topics in Web Client Security">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/playlist?list=PLhixgUqwRTjx2BmNF5-GddyqZcizwLLGP">
+            <strong>LiveOverflow</strong> - Playlist about overview of topics in web application security.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=8GwVBpTgR2c"><strong>LiveOverflow</strong> - About XSS contexts.</ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=KaEj_qZgiKY"><strong>LiveOverflow</strong> - About CSRF.</ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=Yfsmc0b8o78">
+            <strong>LiveOverflow</strong> - About the “confused deputy problem” and the web browser being a confused deputy.
+          </ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=bMPAXsgWNAc"><strong>LiveOverflow</strong> - About data exfiltration using cross-origin stylesheets.</ki-ref>
+          <ki-ref link="https://www.youtube.com/watch?v=eQFbG6CwwdI"><strong>LiveOverflow</strong> - About quality vs. bad web security research.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="network-security" name="Network Security">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=BZTWXl9QNK8&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh">
+        MIT 6.858 Fall 2014: Computer Systems Security, Lecture 12 - <em>Network Security</em>. About the security of the <em>Internet protocol suite</em> at the data
+        link, network/Internet and transport layers, as well as attacks against it.
+      </ki-ref>
+    </ki-reflist>
+    <ki-topic id="denial-of-service" name="Denial of Service (DoS)">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=BcDZS7iYNsA"><strong>Computerphile</strong> - Hosted by Tom Scott, denial of service attack explained.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="mitm" name="Man-in-the-Middle (MITM)">
+      <ki-topic id="arp-poisoning" name="ARP Poisoning">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=A7nih6SANYs">A demonstration of ARP poisoning man-in-the-middle attack.</ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="user-interaction-security" name="User Interaction and Behavioral Security">
+    <ki-topic id="phishing" name="Phishing">
+      <div>TBW</div>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="modes-of-exploitation" name="Modes of Exploitation">
+    <ki-topic id="physical-tampering" name="Physical Tampering">
+      <div>TBW</div>
+    </ki-topic>
+    <ki-topic id="programmatic-tampering" name="Programmatic Tampering">
+      <div>TBW</div>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="topics-in-infosec" name="Topics in Information Security">
+    <ki-reflist>
+      <ki-ref link="https://css.csail.mit.edu/6.858/2014/schedule.html"></ki-ref>
+      <ki-ref link="https://www.youtube.com/playlist?list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh">
+        MIT 6.858 Fall 2014: Computer Systems Security. MIT full course on various topics in computer/information security. Ref.2 is the video
+        lectures playlist. Ref.1 is the course schedule, readings, lecture notes, etc.
+      </ki-ref>
+      <ki-ref link="https://www.youtube.com/watch?v=iGh-P3lEU_0&amp;list=PLA6Ht2dJt3SKN3z4S6nOvuJtesDXbly7S">
+        MIT 6.858 Spring 2020: Computer Systems Security, Lecture 15 - <em>Guest lecture by Max Burkhardt: Information security in real life</em>. Guest
+        lecture by an Airbnb security engineer talking about the practise of InfoSec in industry.
+      </ki-ref>
+    </ki-reflist>
+  </ki-topic>
+</ki-section>
