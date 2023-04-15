@@ -81,6 +81,17 @@ table td {
   padding: 0.5em;
 }
 
+a {
+  color: var(--blue-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-skip-ink: none;
+}
+
 @media (max-height: 800px) {
   :root {
     --navbar-height: 70px;

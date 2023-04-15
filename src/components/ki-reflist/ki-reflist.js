@@ -8,6 +8,8 @@ export class KiReflist extends Component {
     "/src/components/ki-reflist/ki-reflist.css"
   ];
 
+  static lightDOMStyleSheetPaths = "/src/components/ki-reflist/ki-reflist.light-dom.css";
+
   static template = `
   <div class="ref">
     <div>References</div>

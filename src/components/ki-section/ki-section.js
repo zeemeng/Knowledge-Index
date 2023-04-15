@@ -68,7 +68,7 @@ export class KiSection extends Component {
 
   render() {
     if (this.state.activeSection?.id === this.id && this.style.display === "none")
-      this.style.display = "initial";
+      this.style.removeProperty("display");
     if (this.state.activeSection?.id !== this.id && this.style.display !== "none")
       this.style.display = "none";
   }

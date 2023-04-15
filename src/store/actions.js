@@ -12,12 +12,25 @@ export const actions = {
     sections: state.sections.filter(section => section.id !== payload)
   }),
   updateSection: (state, { oldSection, newSection }) => {
-    return {
-      ...state,
-      sections: state.sections.includes(oldSection)
-        ? state.sections.map(section => (section === oldSection ? newSection : section))
-        : state.sections.concat(newSection)
-    };
+    let updatedSections;
+
+    if (state.sections.includes(oldSection))
+      updatedSections = state.sections.map(section =>
+        section === oldSection ? newSection : section
+      );
+    else {
+      // Use `Array.prototype.splice()` for adding new sections to have the sections displayed in the
+      // order as they appear in the DOM tree even if they are loaded asynchronously or added
+      // programmatically.
+      let spliceIndex = Array.from(document.querySelectorAll("ki-section")).findIndex(
+        section => section.id === newSection.id
+      );
+      if (spliceIndex === -1) spliceIndex = state.sections.length;
+      updatedSections = state.sections.concat();
+      updatedSections.splice(spliceIndex, 0, newSection);
+    }
+
+    return { ...state, sections: updatedSections };
   },
   setActiveSection: (state, payload) => ({ ...state, activeSection: payload }),
   toggleNavDropdown: state => ({ ...state, showNavDropdown: !state.showNavDropdown }),

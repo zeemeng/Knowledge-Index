@@ -16,7 +16,7 @@ export class KiMain extends Component {
     <div class="main-content">
       <slot></slot>
       <ki-glossary></ki-glossary>
-      <ki-section id="404" no-toc>Sorry the resource you are looking for does not exist.</ki-section>
+      <ki-section class="flex" id="404" no-toc>Sorry the resource you are looking for does not exist.</ki-section>
     </div>
   </main>
   `;

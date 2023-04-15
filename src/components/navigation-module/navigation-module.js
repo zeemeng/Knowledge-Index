@@ -13,7 +13,7 @@ export default function updatePage() {
   store.dispatch(actionTypes.hideNavDropdown);
   store.dispatch(actionTypes.setActiveSection, activeSection ? activeSection : null);
 
-  scrollHashIntoView();
+  setTimeout(() => scrollHashIntoView(), 50);
 }
 
 window.onload = updatePage;

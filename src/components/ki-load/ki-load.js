@@ -1,4 +1,5 @@
 import Component from "../../lib/Component.js";
+import updatePage from "../navigation-module/navigation-module.js";
 
 const allowedTypes = {
   text: "text",
@@ -47,7 +48,11 @@ export class KiLoad extends Component {
     }
 
     if (type === allowedTypes.html) {
-      this.outerHTML = payload;
+      const container = document.createElement("div");
+      container.innerHTML = payload;
+      this.replaceWith(...container.childNodes);
     }
+
+    updatePage();
   }
 }

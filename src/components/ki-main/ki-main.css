@@ -18,11 +18,6 @@ main.flex {
   transition: 200ms;
 }
 
-.main-content > *:first-child,
-.main-content .topic:first-child > *:first-child {
-  margin-top: 0;
-}
-
 ki-sidebar.active ~ .main-content {
   width: 80%;
   max-width: calc(100% - var(--sidebar-min-width));
