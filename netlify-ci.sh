@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# Manually fetch all recursive submodules
+git submodule update --init --recursive
+
 # Create the 'build' dir if it does not exist
 rm -rf build
 mkdir build
