@@ -1,4 +1,4 @@
-import Store from "../lib/PubSubStore.js";
+import Store from "../lib/statehub/index.js";
 import { actions } from "./actions.js";
 
 const initialState = {

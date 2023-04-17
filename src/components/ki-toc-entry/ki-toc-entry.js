@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import parseNameAttribute from "../utils/parseNameAttribute.js";
 
 export class KiTocEntry extends Component {

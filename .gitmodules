@@ -1,0 +1,6 @@
+[submodule "src/lib/breeze"]
+	path = src/lib/breeze
+	url = git@github.com:zeemeng/breeze.git
+[submodule "src/lib/statehub"]
+	path = src/lib/statehub
+	url = git@github.com:zeemeng/statehub.git

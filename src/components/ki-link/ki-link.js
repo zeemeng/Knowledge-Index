@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import updatePage from "../navigation-module/navigation-module.js";
 
 export class KiLink extends Component {

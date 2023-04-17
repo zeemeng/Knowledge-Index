@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import store from "../../store/store.js";
 import getPageScrollRatio from "../utils/getPageScrollRatio.js";
 import scrollPageByRatio from "../utils/scrollPageByRatio.js";

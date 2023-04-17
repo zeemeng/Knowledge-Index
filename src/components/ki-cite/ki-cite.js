@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import { KiTopic } from "../ki-topic/ki-topic.js";
 
 export class KiCite extends Component {

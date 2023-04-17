@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 
 export class KiReflist extends Component {
   static tagName = "ki-reflist";

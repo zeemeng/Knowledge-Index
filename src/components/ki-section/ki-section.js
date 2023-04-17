@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import Section from "../../models/Section.js";
 import { actionTypes } from "../../store/actions.js";
 import store from "../../store/store.js";

@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import store from "../../store/store.js";
 import parseNameAttribute from "../utils/parseNameAttribute.js";
 import populateGlossaryIndex from "../utils/populateGlossaryIndex.js";

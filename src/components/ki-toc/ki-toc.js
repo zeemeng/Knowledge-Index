@@ -1,4 +1,4 @@
-import Component from "../../lib/Component.js";
+import Component from "../../lib/breeze/index.js";
 import { KiTocEntry } from "../ki-toc-entry/ki-toc-entry.js";
 import { KiTopic } from "../ki-topic/ki-topic.js";
 
