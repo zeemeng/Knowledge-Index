@@ -7,11 +7,11 @@
 
 ## About
 
-An application for storing and compiling notes and references covering topics in the domain of information technology. See it live [here](https://kindex.netlify.app)
+A web application for compiling notes and references on topics about computer science and software engineering. See it live [here](https://kindex.netlify.app)
 
 ## Features
 
-- Built using [Breeze](), a custom framework for working with Web Components
+- Built using [Breeze](), a custom front-end framework for working with Web Components
 - Built using [StateHub](), a custom state management solution providing reactivity to components
 - Custom client-side routing mechanism implemented using the WHATWG HTML Spec's History API.
 - Minimalist design
