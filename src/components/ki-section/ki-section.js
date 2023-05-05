@@ -13,8 +13,10 @@ export class KiSection extends Component {
 
   static template = `
   <div class="topic-toc">
-    <a class="topic-toc-heading"  id="section_id-toc" href="#section_id-toc">Table of Contents</a>
-    <ki-toc></ki-toc>
+    <div class="topic-toc-container">
+      <a class="topic-toc-heading"  id="section_id-toc" href="#section_id-toc">Table of Contents</a>
+      <ki-toc></ki-toc>
+    </div>
   </div>
   <slot></slot>
   `;
