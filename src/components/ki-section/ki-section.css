@@ -1,13 +1,17 @@
 .topic-toc {
-  border: 2px solid rgba(0, 0, 0, 0.15);
-  /* border: 1px solid var(--border-light); */
-  border-radius: var(--border-radius-standard);
-  padding: 30px 60px;
-  /* line-height: 1.35; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .topic-toc * {
   color: inherit;
+}
+
+.topic-toc-container {
+  box-shadow: 0 3px 10px 3px var(--border-light);
+  border-radius: 12px;
+  padding: 2.5rem 5rem;
 }
 
 .topic-toc-heading {
