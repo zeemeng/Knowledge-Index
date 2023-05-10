@@ -108,7 +108,7 @@
       </ki-ref>
     </ki-reflist>
   </ki-topic>
-  <ki-topic id="common-web-apis" name="Common Web APIs (From W3C, WHATWG and More)">
+  <ki-topic id="standard-web-apis" name="Standard Web APIs (From W3C, WHATWG and More)">
     <ki-topic id="fetch" name="Fetch">
       <ki-reflist>
         <ki-ref link="https://javascript.info/fetch-abort">javascript.info - Fetch: Abort (AbortController interface)</ki-ref>
@@ -164,8 +164,13 @@
         </ki-reflist>
       </ki-topic>
     </ki-topic>
+    <ki-topic id="dom-selection-range" name="DOM **Selection** and **Range**">
+      <ki-reflist>
+        <ki-ref link="https://javascript.info/selection-range"><strong>javascript.info</strong> - About DOM <ki-icode>Selection</ki-icode> and <ki-icode>Range</ki-icode> objects.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
   </ki-topic>
-  <ki-topic id="websocket-and-socket_io" name="WebSocket (Common Web API) and Socket.IO">
+  <ki-topic id="websocket-and-socket_io" name="WebSocket (Standard Web API) and Socket.IO">
     <ki-reflist>
       <ki-ref link="https://www.youtube.com/watch?v=1BfCnjr_Vjg">Fireship - WebSockets in 100 Seconds &amp; Beyond with Socket.io</ki-ref>
       <ki-ref link="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">
@@ -193,9 +198,9 @@
     </ki-reflist>
     <p>For more information about each of the persistent client-side storage technologies, consult their respective topic/sub-topic entry:</p>
     <ul>
-      <li><a href="#web-storage">Web Storage (Common Web API)</a></li>
-      <li><a href="#http-cookie">HTTP Cookie</a></li>
-      <li><a href="#indexeddb">IndexedDB (Common Web API)</a></li>
+      <li><a href="#web-storage">Web Storage (Standard Web API)</a></li>
+      <li><a href="/networking#http-cookie">HTTP Cookie</a></li>
+      <li><a href="#indexeddb">IndexedDB (Standard Web API)</a></li>
     </ul>
   </ki-topic>
   <ki-topic id="download-file-client-side" name="Downloading Files Using Client-Side JS">
@@ -556,5 +561,42 @@
         <ki-ref link="https://www.learnrxjs.io/learn-rxjs/subjects/subject">Usage examples of RxJS "Subject".</ki-ref>
       </ki-reflist>
     </ki-topic>
+  </ki-topic>
+  <ki-topic id="vite" name="**Vite** (Front-end Build Tool)">
+    <ki-reflist>
+      <ki-ref link="https://vitejs.dev/guide/">Official <em>Vite</em> documentation.</ki-ref>
+    </ki-reflist>
+  </ki-topic>
+  <ki-topic id="tailwind" name="Tailwind CSS">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=mr15Xzb1Ook"><strong>Fireship</strong> - <em>Tailwind in 100 Seconds</em>.</ki-ref>
+      <ki-ref link="https://www.youtube.com/watch?v=pfaSUYaSgRo"><strong>Fireship</strong> - <em>Ultimate Tailwind CSS Tutorial // Build a Discord-inspired Animated Navbar</em>.</ki-ref>
+      <ki-ref link="https://tailwindcss.com/docs/installation">Official documentation on installing <em>Tailwind CSS</em> for various types of projects.</ki-ref>
+      <ki-ref link="https://tailwindcss.com/docs/editor-setup">Official documentation on setting up the dev environment for optimal developer experience.</ki-ref>
+      <ki-ref link="https://tailwindcss.com/docs/utility-first">Official documentation on core concepts of <em>Tailwind CSS</em>.</ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/73965056/tailwind-styles-dont-work-with-a-conditional">Discussion about conditionally applying a <em>Tailwind</em> class.</ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/71547933/how-do-i-conditionally-render-a-tailwind-class-in-react">Discussion about conditionally applying a <em>Tailwind</em> class.</ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/67383686/how-to-add-a-style-on-a-condition-in-tailwind-css">Discussion about conditionally applying a <em>Tailwind</em> class.</ki-ref>
+    </ki-reflist>
+    Pros and cons of <em>Tailwind CSS</em>.<br /><br />
+    <strong>Pros:</strong>
+    <ul>
+      <li>Less files and less boiler plate code required. Expected faster development speed.</li>
+      <li>Ultimate form of markup and styles colocation.</li>
+    </ul>
+    <br />
+    <strong>Transitory cons:</strong>
+    <ul>
+      <li>Needs to reason in abstracted <em>Tailwind</em> units for various classes or needs to mentally translate from native CSS units to <em>Tailwind</em> units.</li>
+      <li>Finding suitable <em>Tailwind</em> classes to achieve certain effects, and checking out documentation about suchs classes take extra time.</li>
+    </ul>
+    <br />
+    <strong>Definite cons:</strong>
+    <ul>
+      <li>No separation of concerns. Cluttered markup.</li>
+      <li>Conditional application of a <em>Tailwind</em> class may result in even more cluttered markup.</li>
+      <li>CSS rulesets designed in browser dev tools panel or elsewhere need to be translated into <em>Tailwind</em> classes to achieve desired styling.</li>
+      <li>Complex styling requirements might not be achievable using bult-in utility classes and may requires additional styling approaches.</li>
+    </ul>
   </ki-topic>
 </ki-section>
