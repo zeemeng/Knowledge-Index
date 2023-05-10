@@ -1,5 +1,5 @@
 <ki-section id="back-end-development" name="Back-end" long-name="Back-end Development">
-  <ki-topic id="nodejs" name="Node.js JS Runtime (server-side usage)">
+  <ki-topic id="nodejs" name="Node.js JavaScript Runtime">
     <ki-topic id="__dirname" name="The '__dirname' variable">
       <ki-reflist>
         <ki-ref link="https://nodejs.org/api/modules.html#modules_dirname">
@@ -55,6 +55,33 @@
           GitHub repository of the "dotenv" package for Node.js for managing environment variables.
         </ki-ref>
       </ki-reflist>
+    </ki-topic>
+    <ki-topic id="esm-vs-commonjs" name="ECMAScript Modules VS CommonJS Modules">
+      <ki-reflist>
+        <ki-ref link="https://pencilflip.medium.com/the-three-differences-between-require-and-import-in-node-js-f54f78f5936f">Good article series about ESM vs CommonJS modules. (Part 1)</ki-ref>
+        <ki-ref link="https://pencilflip.medium.com/using-es-modules-with-commonjs-modules-in-node-js-1015786dab03">Good article series about ESM vs CommonJS modules. (Part 2)</ki-ref>
+        <ki-ref link="https://pencilflip.medium.com/using-es-modules-with-commonjs-modules-in-the-browser-8060fdf13e3d">Good article series about ESM vs CommonJS modules. (Part 3)</ki-ref>
+        <ki-ref link="https://pencilflip.medium.com/using-es-modules-with-commonjs-modules-with-webpack-2cb6821a8b99">Good article series about ESM vs CommonJS modules. (Part 4)</ki-ref>
+        <ki-ref link="https://dev.to/lico/how-to-import-and-export-in-commonjs-and-es-modules-43m1">Article about <em>How to import and export in CommonJS and ES Modules </em>.</ki-ref>
+        <ki-ref link="https://2ality.com/2022/10/commonjs-named-exports.html">Article about <em>How to write CommonJS exports that can be name-imported from ESM</em>.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="npm" name="Node Package Manager (NPM)">
+    <ki-reflist>
+      <ki-ref link="https://stackoverflow.com/questions/5926672/where-does-npm-install-packages">About the location of globally and locally installed NPM packages.</ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/59159553/why-cant-react-project-name-contain-capital-letters">About certain restriction on the naming of NPM packages.</ki-ref>
+    </ki-reflist>
+    <ki-topic id="npm-publish" name="Publishing NPM Packages">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=Knw8U5XyHaM">Tutorial about how to create and publish NPM packages.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=Ufwbp838yZA">Tutorial about how to create and publish NPM packages.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=J4b_T-qH3BY">Tutorial about how to create and publish NPM packages.</ki-ref>
+        <ki-ref link="https://docs.npmjs.com/cli/v9/commands/npm-link">Reference on the <ki-icode>npm link</ki-icode> command, used to locally test packages before publishing.</ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/19094630/how-do-i-uninstall-a-package-installed-using-npm-link">About uninstalling packages that have been installed using <ki-icode>npm link</ki-icode>.</ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/25466178/npm-link-multiple-local-inter-dependant-modules">About installing multiple NPM packages using <ki-icode>npm link</ki-icode>.</ki-ref>
+      </ki-reflist>
+      Also see topics <ki-link path="#esm-vs-commonjs">ECMAScript Modules VS CommonJS Modules</ki-link> and <ki-link path="/front-end-development#html-script-import-map">HTML Script Import Map</ki-link>.
     </ki-topic>
   </ki-topic>
   <ki-topic id="axios" name="Axios">
