@@ -1,5 +1,55 @@
 <ki-section id="it-operations" name="IT Ops" long-name="IT Operations">
-  <ki-topic id="budget-web-hosting" name="About Free/Inexpensive Web Hosting Providers (2021-05)">
+  <ki-topic id="docker" name="Docker">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=3c-iBn73dDE">3HRS Docker tutorial, including topics such as Docker CLI, Dockerfile, and Docker Compose.</ki-ref>
+    </ki-reflist>
+    <ki-topic id="docker-cli" name="Docker CLI">
+      <ki-reflist>
+        <ki-ref link="https://docs.docker.com/engine/reference/commandline/cli/">Official Docker CLI reference.</ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/30494050/how-do-i-pass-environment-variables-to-docker-containers">Discussion about methods for passing environment variables to Docker containers.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="dockerfile" name="Dockerfile">
+      <ki-reflist>
+        <ki-ref link="https://docs.docker.com/engine/reference/builder/">Official Dockerfile reference.</ki-ref>
+        <ki-ref link="https://docs.docker.com/language/nodejs/build-images/">Tutorial on creating a Dockerfile for a Node.js application.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="docker-compose" name="Docker Compose">
+      <ki-reflist>
+        <ki-ref link="https://docs.docker.com/compose/compose-file/">Official Docker Compose reference.</ki-ref>
+        <ki-ref link="https://docs.docker.com/compose/environment-variables/set-environment-variables/">Official manual - <em>Ways to set environment variables in Compose</em></ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="union-file-system" name="Union File System">
+      <ki-reflist>
+        <ki-ref link="https://www.terriblecode.com/blog/how-docker-images-work-union-file-systems-for-dummies/">Excellent, concise article about union file systems and their use in Docker containers.</ki-ref>
+        <ki-ref link="https://medium.com/@knoldus/unionfs-a-file-system-of-a-container-2136cd11a779">Excellent, concise article about UnionFS and its use in containers.</ki-ref>
+        <ki-ref link="https://en.wikipedia.org/wiki/UnionFS">Wikipedia article about UnionFS.</ki-ref>
+        <ki-ref link="https://lwn.net/Articles/217084/">Article about UnionFS.</ki-ref>
+        <ki-ref link="https://lwn.net/Articles/324291/">Article about <em>Unioning file systems: Architecture, features, and design choices</em>.</ki-ref>
+        <ki-ref link="https://docs.docker.com/storage/storagedriver/">Official manual about Docker storage drivers.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="docker-volume" name="Docker Volume">
+      <ki-reflist>
+        <ki-ref link="https://www.howtogeek.com/devops/what-are-docker-volumes-and-how-do-you-use-them/">Article about Docker volumes and how to use them.</ki-ref>
+        <ki-ref link="https://docs.docker.com/storage/volumes/">Official manual about Docker volumes.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="github-actions" name="GitHub Actions">
+    <ki-reflist>
+      <ki-ref link="https://www.youtube.com/watch?v=cP0I9w2coGU">Very short overview of GitHub Actions.</ki-ref>
+      <ki-ref link="https://www.youtube.com/watch?v=TLB5MY9BBa4">Excellent, detailed tutorial on GitHub Actions.</ki-ref>
+      <ki-ref link="https://www.youtube.com/watch?v=R8_veQiYBjI">Good tutorial on GitHub Actions.</ki-ref>
+      <ki-ref link="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">Official reference on GitHub Actions workflow file's syntax.</ki-ref>
+      <ki-ref link="https://docs.github.com/en/actions/learn-github-actions/contexts">Official docs on using <em>contexts</em> in GH Actions workflow files.</ki-ref>
+      <ki-ref link="https://docs.github.com/en/actions/learn-github-actions/expressions">Official docs on using <em>expressions</em> in GH Actions workflow files.</ki-ref>
+      <ki-ref link="https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts">Official docs on producing and consuming <em>artifacts</em> in GH Actions workflow files.</ki-ref>
+    </ki-reflist>
+  </ki-topic>
+  <ki-topic id="budget-web-hosting" name="Free/Inexpensive Web Hosting Providers" updated="05-2021">
     <ki-topic id="budget-web-hosting-static-content" name="Static Content Hosting (e.g. for web pages)">
       <ki-reflist>
         <ki-ref link="https://www.netlify.com/pricing/">
@@ -89,5 +139,61 @@
         </ki-ref>
       </ki-reflist>
     </ki-topic>
+  </ki-topic>
+  <ki-topic id="aws" name="Amazon Web Services (AWS)">
+    <ki-topic id="aws-certs" name="AWS Certifications">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=yQr0Gq1Yp_g">Presentation about AWS certifications with recommendations about which ones to take.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=fgbdtNNXR0U">Presentation about AWS certifications with recommendations about which ones to take.</ki-ref>
+        <ki-ref link="https://aws.amazon.com/certification/exams/">All available AWS certifications.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=3hLmDS179YE">4HRS - <em>AWS Certified Cloud Practitioner Training 2020 - Full Course</em></ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="aws-cli" name="AWS CLI">
+      <ki-reflist>
+        <ki-ref link="https://github.com/aws/aws-cli/tree/v2">Official README about how to install and setup AWS CLI v2.</ki-ref>
+        <ki-ref link="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html">Official reference/manpage for AWS CLI v2.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="aws-containers" name="Container related services on AWS">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=AYAh6YDXuho"><em>Containers on AWS Overview: ECS | EKS | Fargate | ECR</em></ki-ref>
+      </ki-reflist>
+      <ki-topic id="aws-ecs" name="AWS Elastic Container Service (ECS)">
+        <ki-reflist>
+          <ki-ref link="https://www.youtube.com/watch?v=esISkPlnxL0">Excellent video tutorial - <em>AWS ECS Tutorial | Deploy a New Application from Scratch | KodeKloud</em></ki-ref>
+        </ki-reflist>
+      </ki-topic>
+    </ki-topic>
+    <ki-topic id="aws-cloudformation" name="AWS CloudFormation">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=YXVCdGyHDSk">Excellent video tutorial explaining AWS CloudFormation.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=GP-wknHzPpI">Excellent presentation about various IaC approaches for AWS, including CloudFormation.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=bJHHQM7GGro">About tips and advices for authoring AWS CloudFormation.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Official docs about CloudFormation template format.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Official docs about CloudFormation template outputs.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html">Official docs about CloudFormation intrinsic functions, 
+          which are data manipulation functions which can be invoked within templates using a particular syntax.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Official reference on CloudFormation resource and property types.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+    <ki-topic id="aws-cdk" name="AWS Cloud Development Kit (CDK)">
+      <ki-reflist>
+        <ki-ref link="https://www.youtube.com/watch?v=I_ftyDeHffE">Excellent video tutorial about using AWS CDK with TypeScript.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=LU5VgGWO9zw">Excellent video tutorial about using AWS CDK with TypeScript, deploying a <strong>complete full-stack application</strong> with multiple services.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_languages">Official docs about installing and setting up AWS CDK.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/cdk/v2/guide/cli.html">Official docs about the CDK CLI.</ki-ref>
+        <ki-ref link="https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html">Official docs about <em>bootstrapping</em> AWS CDK.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=YHdZYw3hXwE">About best practices when developing IaC for AWS.</ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=-K0bEk2Cp3M">Preaching about why using AWS CDK.</ki-ref>
+        <ki-ref link="https://www.reddit.com/r/aws/comments/eqmu73/whats_the_difference_between_the_sdk_and_cdk/">Discussion about the difference between AWS SDK and AWS CDK.</ki-ref>
+      </ki-reflist>
+    </ki-topic>
+  </ki-topic>
+  <ki-topic id="cdk-terraform-azure" name="Azure IaC using CDK for Terraform">
+    <ki-reflist>
+      <ki-ref link="https://www.reddit.com/r/AZURE/comments/pcox2a/where_is_azures_answer_to_aws_cdk/">Discussion about availablility of CDK-like IaC for Microsoft Azure.</ki-ref>
+      <ki-ref link="https://www.hashicorp.com/blog/building-azure-resources-with-typescript-using-the-cdk-for-terraform">Article about <em>Building Azure Resources with TypeScript Using the CDK for Terraform</em>.</ki-ref>
+    </ki-reflist>
   </ki-topic>
 </ki-section>
