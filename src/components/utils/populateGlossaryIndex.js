@@ -1,5 +1,3 @@
-import parseNameAttribute from "./parseNameAttribute.js";
-
 export default function populateGlossaryIndex(glossaryComponent) {
   // Helper functions for generation of glossary index content
   function isAlphaNum(char = "") {
@@ -12,50 +10,22 @@ export default function populateGlossaryIndex(glossaryComponent) {
   // Generate the glossary index entries
   let glossaryIndexEntries = [];
   document.querySelectorAll("ki-section").forEach(section => {
-    const link = document.createElement("ki-link");
-
+    const glossaryEntry = document.createElement("ki-glossary-entry");
+    glossaryEntry.targetElement = section;
     const name = section.getAttribute("long-name")?.trim() || section.getAttribute("name")?.trim();
-    link.append(parseNameAttribute(name));
-    link.plainName = name.replace(/\*\*(.+?)\*\*/g, "$1");
+    glossaryEntry.plainName = name.replace(/\*\*(.+?)\*\*/g, "$1");
 
-    link.setAttribute("path", "/" + section.id);
-    link.className = "index-entry";
-    glossaryIndexEntries.push(link);
+    glossaryIndexEntries.push(glossaryEntry);
 
     section.querySelectorAll("ki-topic").forEach(topic => {
-      const link = document.createElement("ki-link");
-
+      const glossaryEntry = document.createElement("ki-glossary-entry");
+      glossaryEntry.targetElement = topic;
       const name = topic.getAttribute("long-name")?.trim() || topic.getAttribute("name")?.trim();
-      link.append(parseNameAttribute(name));
-      link.plainName = name.replace(/\*\*(.+?)\*\*/g, "$1");
+      glossaryEntry.plainName = name.replace(/\*\*(.+?)\*\*/g, "$1");
 
-      link.setAttribute("path", "/" + section.id + "#" + topic.id);
-      link.className = "index-entry";
-      glossaryIndexEntries.push(link);
+      glossaryIndexEntries.push(glossaryEntry);
     });
   });
-
-  // sections.forEach(section => {
-  //   glossaryIndexEntries.push(
-  //     createLinkElement({
-  //       path: section.id,
-  //       textContent: section.dataset.titleLong
-  //         ? section.dataset.titleLong
-  //         : section.dataset.titleShort,
-  //       classes: ["index-entry"]
-  //     })
-  //   );
-  //   section.querySelectorAll("[id]").forEach(topic =>
-  //     glossaryIndexEntries.push(
-  //       createLinkElement({
-  //         path: section.id,
-  //         fragment: topic.id,
-  //         childElement: topic.firstElementChild.cloneNode(true),
-  //         classes: ["index-entry"]
-  //       })
-  //     )
-  //   );
-  // });
 
   // Sort glossary index entries alphanumerically by string value
   glossaryIndexEntries.sort((a, b) => {
@@ -102,12 +72,6 @@ export default function populateGlossaryIndex(glossaryComponent) {
     } else if (leadChar !== accum) {
       temp.push(createIndexHeading(leadChar.toUpperCase()));
     }
-
-    // if (leadChar !== accum) {
-    //   if (!isAlphaNum(leadChar) && accum !== "#") temp.push(createIndexHeading("#"));
-    //   else if (isNum(leadChar)) temp.push(createIndexHeading("0-9"));
-    //   else temp.push(createIndexHeading(leadChar.toUpperCase()));
-    // }
 
     temp.push(entry);
     return !isAlphaNum(leadChar) ? "#" : isNum(leadChar) ? "0-9" : leadChar;

@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+div {
+  font-size: 0.875rem;
+  color: var(--grey-0);
+}
+
+ki-link {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  color: var(--text-dark);
+}
+
+ki-link:hover {
+  color: var(--blue-1);
+}
