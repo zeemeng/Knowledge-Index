@@ -1,8 +1,5 @@
 :host {
   cursor: pointer;
-}
-
-:host {
   color: var(--blue-1);
   text-decoration: none;
 }
@@ -18,4 +15,8 @@ a {
   text-decoration: inherit;
   text-underline-position: inherit;
   text-decoration-skip-ink: inherit;
+}
+
+.placeholder {
+  font-style: italic;
 }

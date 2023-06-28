@@ -1,4 +1,5 @@
 export { KiGlossary } from "./ki-glossary/ki-glossary.js";
+export { KiGlossaryEntry } from "./ki-glossary-entry/ki-glossary-entry.js";
 export { KiNavbar } from "./ki-navbar/ki-navbar.js";
 export { KiMain } from "./ki-main/ki-main.js";
 export { KiSection } from "./ki-section/ki-section.js";
@@ -13,4 +14,5 @@ export { KiCite } from "./ki-cite/ki-cite.js";
 export { KiIcode } from "./ki-icode/ki-icode.js";
 export { KiLoad } from "./ki-load/ki-load.js";
 export { KiCode } from "./ki-code/ki-code.js";
+export { KiBttButton } from "./ki-btt-button/ki-btt-button.js";
 import updatePage from "./navigation-module/navigation-module.js";

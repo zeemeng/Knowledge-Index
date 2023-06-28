@@ -6,7 +6,7 @@ export class KiLink extends Component {
 
   static styleSheetPaths = "/src/components/ki-link/ki-link.css";
 
-  static template = `<a><slot></slot></a>`;
+  static template = `<a><slot></slot><span class="placeholder"></span></a>`;
 
   static observedAttributes = ["path"];
 
@@ -15,6 +15,7 @@ export class KiLink extends Component {
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue) return;
     this.shadowRoot.querySelector("a").setAttribute("href", newValue);
+    this.render();
   }
 
   constructor() {
@@ -24,5 +25,16 @@ export class KiLink extends Component {
       history.pushState(null, document.title, this.getAttribute("path"));
       updatePage();
     };
+  }
+
+  render() {
+    const placeholder = this.shadowRoot.querySelector(".placeholder");
+
+    if (this.textContent.trim()) {
+      placeholder.style.display = "none";
+    } else {
+      placeholder.textContent = this.getAttribute("path");
+      placeholder.style.removeProperty("display");
+    }
   }
 }

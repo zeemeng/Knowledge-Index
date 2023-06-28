@@ -12,4 +12,4 @@
 
 ## Child HTML/DOM content
 
-A description for the internal link. Slotted within an anchor.
+Optional. A description for the internal link, slotted within an anchor. If omitted, an italisized string corresponding to the value of the `path` attribute, will be displayed.
