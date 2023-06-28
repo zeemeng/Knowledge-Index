@@ -1,0 +1,31 @@
+:host {
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  cursor: pointer;
+  opacity: 85%;
+  transition: 150ms;
+}
+
+:host(:hover) {
+  opacity: 1;
+}
+
+svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+svg > * {
+  transition: 150ms;
+}
+
+svg:hover > circle {
+  /* fill: var(--blue-1); */
+  fill: var(--blue-2);
+  stroke: none;
+}
+
+svg:hover > line {
+  stroke: #fff;
+}

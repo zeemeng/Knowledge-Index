@@ -14,4 +14,5 @@ export { KiCite } from "./ki-cite/ki-cite.js";
 export { KiIcode } from "./ki-icode/ki-icode.js";
 export { KiLoad } from "./ki-load/ki-load.js";
 export { KiCode } from "./ki-code/ki-code.js";
+export { KiBttButton } from "./ki-btt-button/ki-btt-button.js";
 import updatePage from "./navigation-module/navigation-module.js";

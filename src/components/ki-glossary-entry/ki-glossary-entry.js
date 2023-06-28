@@ -8,7 +8,7 @@ export class KiGlossaryEntry extends Component {
 
   static styleSheetPaths = [
     "/src/components/ki-common-styles/ki-component-styles.css",
-    "src/components/ki-glossary-entry/ki-glossary-entry.css"
+    "/src/components/ki-glossary-entry/ki-glossary-entry.css"
   ];
 
   static template = `
