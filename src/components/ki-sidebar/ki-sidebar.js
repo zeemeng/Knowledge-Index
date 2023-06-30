@@ -71,12 +71,12 @@ export class KiSidebar extends Component {
     this.shadowRoot.querySelector(".sidebar-show-control").onclick = () => {
       const ratio = getPageScrollRatio();
       this.classList.add("active");
-      scrollPageByRatio(ratio, 200);
+      scrollPageByRatio(ratio, 110);
     };
     this.shadowRoot.querySelector(".sidebar-hide-control").onclick = () => {
       const ratio = getPageScrollRatio();
       this.classList.remove("active");
-      scrollPageByRatio(ratio, 200);
+      scrollPageByRatio(ratio, 110);
     };
   }
 

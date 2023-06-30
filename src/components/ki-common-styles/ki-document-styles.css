@@ -38,6 +38,7 @@
   --navbar-height: 85px;
   --sidebar-min-width: 285px;
   --sidebar-controls-height: 135px;
+  --sidebar-transition-duration: 100ms;
   --border-radius-standard: 8px;
 
   --container-width: 90%;

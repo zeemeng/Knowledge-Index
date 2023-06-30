@@ -8,7 +8,7 @@
   position: sticky;
   top: var(--navbar-height);
 
-  transition: 200ms;
+  transition: var(--sidebar-transition-duration);
 
   overflow-x: hidden;
   overflow-y: auto;
