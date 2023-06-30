@@ -3,7 +3,7 @@ export default function scrollPageByRatio(ratio, delay = 0) {
     () =>
       window.scroll({
         top: ratio * document.body.offsetHeight,
-        behavior: "smooth"
+        behavior: "instant"
       }),
     delay
   );
