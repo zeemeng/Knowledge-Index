@@ -23,6 +23,8 @@ export class KiGlossary extends Component {
 
   static init = this.initClass();
 
+  populateGlossaryIndexTimeoutId;
+
   connectedCallback() {
     this.storeSubscription = store.subscribe(state => this.setState(state));
 
@@ -66,6 +68,9 @@ export class KiGlossary extends Component {
     }
 
     // Populate the glossary index
-    if (this.state.sections !== this.previousState.sections) populateGlossaryIndex(this);
+    if (this.state.sections !== this.previousState.sections) {
+      clearTimeout(this.populateGlossaryIndexTimeoutId);
+      this.populateGlossaryIndexTimeoutId = setTimeout(() => populateGlossaryIndex(this));
+    }
   }
 }
