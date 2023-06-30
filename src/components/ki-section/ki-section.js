@@ -2,6 +2,7 @@ import Component from "../../lib/breeze/index.js";
 import Section from "../../models/Section.js";
 import { actionTypes } from "../../store/actions.js";
 import store from "../../store/store.js";
+import validateElementId from "../utils/validateElementId.js";
 
 export class KiSection extends Component {
   static tagName = "ki-section";
@@ -54,13 +55,12 @@ export class KiSection extends Component {
   }
 
   connectedCallback() {
+    validateElementId(this); // Validates the element's id and autogenerate one if not present.
     this.storeSubscription = store.subscribe(state => this.setState(state));
-    const newSection = new Section(
-      this.id,
-      this.getAttribute("name"),
-      this.getAttribute("long-name")
-    );
-    store.dispatch(actionTypes.updateSection, { oldSection: null, newSection });
+    store.dispatch(actionTypes.updateSection, {
+      oldSection: null,
+      newSection: new Section(this.id, this.getAttribute("name"), this.getAttribute("long-name"))
+    });
   }
 
   disconnectedCallback() {

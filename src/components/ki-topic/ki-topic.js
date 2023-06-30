@@ -1,5 +1,6 @@
 import Component from "../../lib/breeze/index.js";
 import parseNameAttribute from "../utils/parseNameAttribute.js";
+import validateElementId from "../utils/validateElementId.js";
 
 export class KiTopic extends Component {
   static tagName = "ki-topic";
@@ -37,6 +38,8 @@ export class KiTopic extends Component {
   static init = this.initClass();
 
   connectedCallback() {
+    validateElementId(this); // Validates the element's id and autogenerate one if not present.
+
     let level = 1;
     let currentElement = this.parentElement;
     while (currentElement) {
