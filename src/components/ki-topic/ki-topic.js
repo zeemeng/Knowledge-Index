@@ -1,4 +1,5 @@
 import Component from "../../lib/breeze/index.js";
+import groupKiRefElements from "../utils/groupKiRefElements.js";
 import parseNameAttribute from "../utils/parseNameAttribute.js";
 import validateElementId from "../utils/validateElementId.js";
 
@@ -39,6 +40,7 @@ export class KiTopic extends Component {
 
   connectedCallback() {
     validateElementId(this); // Validates the element's id and autogenerate one if not present.
+    groupKiRefElements(this); // Auto-group adjacent `KiRef` elements that are immediate children of the current element into a `KiReflist`.
 
     let level = 1;
     let currentElement = this.parentElement;
