@@ -34,11 +34,13 @@ export class KiSection extends Component {
 
     // Update table of contents related attributes
     if (attributeName === "id" && !this.getAttribute("no-toc")) {
-      this.shadowRoot.querySelector("ki-toc")?.setAttribute("section", newValue);
-      this.shadowRoot.querySelector(".topic-toc-heading")?.setAttribute("id", newValue + "-toc");
-      this.shadowRoot
-        .querySelector(".topic-toc-heading")
-        ?.setAttribute("href", "#" + newValue + "-toc");
+      setTimeout(() => {
+        this.shadowRoot.querySelector("ki-toc")?.setAttribute("section", newValue);
+        this.shadowRoot.querySelector(".topic-toc-heading")?.setAttribute("id", newValue + "-toc");
+        this.shadowRoot
+          .querySelector(".topic-toc-heading")
+          ?.setAttribute("href", "#" + newValue + "-toc");
+      });
     }
 
     // Update store value related to the current section
