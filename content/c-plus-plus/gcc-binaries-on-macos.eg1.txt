@@ -1,0 +1,6 @@
+> sw_vers    
+ProductName:		macOS
+...
+> g++ --version
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+...

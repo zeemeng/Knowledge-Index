@@ -1,61 +1,179 @@
 <ki-section id="cpp" name="C++">
-  <ki-topic id="cpp-template" name="Template">
-    <ki-reflist>
-      <ki-ref link="https://www.youtube.com/watch?v=I-hZkUa9mIs">
-        <strong>The Cherno</strong>
-        - Basic introduction to C++ template.
-      </ki-ref>
-      <ki-ref link="https://www.youtube.com/watch?v=LMP_sxOaz6g">
-        <strong>CppCon</strong>
-        - Detailed demonstration on C++ template.
-      </ki-ref>
-      <ki-ref link="https://stackoverflow.com/questions/5612791/c-template-and-header-files">
-        About rationale of keeping both template declarations and template definitions in header files.
-      </ki-ref>
-    </ki-reflist>
-  </ki-topic>
-  <ki-topic id="cpp-uninitialized-vars-ptrs" name="Uninitialized Variables and Pointers">
-    <ki-reflist>
-      <ki-ref link="https://www.learncpp.com/cpp-tutorial/uninitialized-variables-and-undefined-behavior/">
-        About Uninitialized variables and pointers.
-      </ki-ref>
-      <ki-ref link="https://computer.howstuffworks.com/c25.htm">Article with short segment about Uninitialized variables and pointers.</ki-ref>
-      <ki-ref link="http://www.cplusplus.com/doc/tutorial/pointers/">About pointers.</ki-ref>
-      <ki-ref link="http://cwe.mitre.org/data/definitions/824.html">About program security implications of accessing uninitialized pointers.</ki-ref>
-    </ki-reflist>
-  </ki-topic>
-  <ki-topic id="lvalue-v-rvalue" name="lvalue Vs. rvalue">
-    <ki-reflist>
-      <ki-ref link="https://www.youtube.com/watch?v=UTUdhjzws5g">
-        Very clear and detailed explanation on differences between “lvalue” and “rvalue”.
-      </ki-ref>
-    </ki-reflist>
+  <ki-topic id="lvalue-v-rvalue" name="Lvalue Vs. Rvalue">
+    <ki-ref link="https://www.youtube.com/watch?v=UTUdhjzws5g">
+      Very clear and detailed explanation on differences between “lvalue” and “rvalue”.
+    </ki-ref>
     <p>
       An “lvalue” is a value which has an identifiable memory address associated with it. An “rvalue” is defined by exclusion to “lvalue”, that is any
       value that is not an “lvalue”. In programming languages such as C and C++, an “lvalue” can be implicitly converted to “rvalue”, while the
       reverse is not true.
     </p>
   </ki-topic>
-  <ki-topic id="using-gcc" name="Using GNU Compiler Collection (GCC)">
-    <ki-reflist>
-      <ki-ref link="https://codingfreak.blogspot.com/2008/02/compilation-process-in-gcc.html">Quick introduction to building programs with GCC.</ki-ref>
-      <ki-ref link="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html">About building C/C++ programs with GCC and Make.</ki-ref>
-      <ki-ref link="https://github.com/google/sanitizers/wiki/AddressSanitizerLeakSanitizer">
-        About an useful compiler option for detecting memory leaks 
-      </ki-ref>
-      <ki-ref link="https://events.static.linuxfound.org/images/stories/pdf/lfcs2012_ccoutant.pdf">About using incremental linking with GCC.</ki-ref>
-    </ki-reflist>
+
+  <ki-topic id="cpp-uninitialized-vars-ptrs" name="Uninitialized Variables and Pointers">
+    <ki-ref link="https://www.learncpp.com/cpp-tutorial/uninitialized-variables-and-undefined-behavior/">
+      About Uninitialized variables and pointers.
+    </ki-ref>
+    <ki-ref link="https://computer.howstuffworks.com/c25.htm">Article with short segment about Uninitialized variables and pointers.</ki-ref>
+    <ki-ref link="http://www.cplusplus.com/doc/tutorial/pointers/">About pointers.</ki-ref>
+    <ki-ref link="http://cwe.mitre.org/data/definitions/824.html">About program security implications of accessing uninitialized pointers.</ki-ref>
   </ki-topic>
+
+  <ki-topic name="Operator Overloading">
+    <ki-ref link="https://en.cppreference.com/w/cpp/language/operators">
+      <strong>cppreference.com</strong> - On operator overloading.
+    </ki-ref>
+    <ki-ref link="https://www.ibm.com/docs/en/zos/2.4.0?topic=only-overloading-operators-c">
+      About operator overloading. Contains a nice table listing all operators that may be overloaded.
+    </ki-ref>
+    <ki-ref link="https://www.youtube.com/watch?v=mS9755gF66w">
+      <strong>The Cherno</strong> - Good video tutorial about the basics of operator overloading.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="Pointers and References">
+    <ki-ref link="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/cp4_PointerReference.html">
+      Excellent, thorough article about C++ pointers, references and dynamic memory allocation.
+    </ki-ref>
+
+    <ki-topic name="Rvalue Reference (**&&**)">
+      <ki-ref link="https://en.cppreference.com/w/cpp/language/reference">
+        <strong>cppreference.com</strong> - On rvalue reference.
+      </ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/4549151/c-double-address-operator">
+        Discussion about rvalue reference.
+      </ki-ref>
+    </ki-topic>
+  </ki-topic>
+
+  <ki-topic name="Heap Memory Allocation">
+    <ki-topic name="Residual Heap Memory Clean Up on Process Exit">
+      <ki-ref link="https://stackoverflow.com/questions/15882531/does-the-heap-get-freed-when-the-program-exits">
+        Discussion about the effect of residual heap memory that has not been manually deallocated when a process/program exits.
+      </ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/2213627/when-you-exit-a-c-application-is-the-malloc-ed-memory-automatically-freed">
+        Discussion about the effect of residual heap memory that has not been manually deallocated when a process/program exits.
+      </ki-ref>
+    </ki-topic>
+  </ki-topic>
+
+  <ki-topic id="cpp-template" name="Template">
+    <ki-ref link="https://www.youtube.com/watch?v=I-hZkUa9mIs">
+      <strong>The Cherno</strong>
+      - Basic introduction to C++ template.
+    </ki-ref>
+    <ki-ref link="https://www.youtube.com/watch?v=LMP_sxOaz6g">
+      <strong>CppCon</strong>
+      - Detailed demonstration on C++ template.
+    </ki-ref>
+    <ki-ref link="https://stackoverflow.com/questions/5612791/c-template-and-header-files">
+      About rationale of keeping both template declarations and template definitions in header files.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="C++ Standard Libraries and Standard Template Library (STL)">
+    <ki-ref link="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/cp9_STL.html">
+      About <em>C++ Standard Libraries and Standard Template Library (STL)</em>.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="Iterator">
+    <ki-ref link="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/cp9_STL.html#zz-2.4">
+      Excellent presentation about C++ iterators.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="CV-qualifiers (**const** and **volatile**)">
+    <ki-ref link="https://en.cppreference.com/w/cpp/language/cv">
+      <strong>cppreference.com</strong> - On <em>cv-qualifiers</em>.
+    </ki-ref>
+
+    <ki-topic name="CV-qualified Member Functions">
+      <ki-ref link="https://en.cppreference.com/w/cpp/language/member_functions#Member_functions_with_cv-qualifiers">
+        <strong>cppreference.com</strong> - On cv-qualified member functions.
+      </ki-ref>
+      <ki-ref link="https://learn.microsoft.com/en-us/cpp/cpp/const-cpp?view=msvc-170#const-member-functions">
+        About cv-qualified member functions.
+      </ki-ref>
+      <ki-ref link="https://faculty.cs.niu.edu/~mcmahon/CS241/Notes/const_objects_and_member_functions.html">
+        About cv-qualified member functions.
+      </ki-ref>
+    </ki-topic>
+  </ki-topic>
+
+  <ki-topic name="Placeholder Type Specifier (**auto**)">
+    <ki-ref link="https://en.cppreference.com/w/cpp/language/auto">
+      <strong>cppreference.com</strong> - On the placeholder type specifier. (i.e. the <ki-icode>auto</ki-icode> keyword)
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="Range-based For Loop">
+    <ki-ref link="https://en.cppreference.com/w/cpp/language/range-for">
+      <strong>cppreference.com</strong> - On range-based <em>for</em> loops.
+    </ki-ref>
+    <ki-ref link="https://stackoverflow.com/questions/15927033/what-is-the-correct-way-of-using-c11s-range-based-for">
+      Discussion about proper usage of range-based for loops. Contains answer with <strong>clear explanation</strong> and <strong>concise examples</strong>.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="Structured Binding Declaration">
+    <ki-ref link="https://en.cppreference.com/w/cpp/language/structured_binding">
+      <strong>cppreference.com</strong> - On structured binding declaration.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="List-initialization">
+    <ki-ref link="https://en.cppreference.com/w/cpp/language/list_initialization">
+      <strong>cppreference.com</strong> - On <em>list-initialization</em>.
+    </ki-ref>
+
+    <ki-topic name="Aggregate Initialization">
+      <ki-ref link="https://en.cppreference.com/w/cpp/language/aggregate_initialization">
+        <strong>cppreference.com</strong> - On <em>aggregate initialization</em>.
+      </ki-ref>
+    </ki-topic>
+  </ki-topic>
+
+  <ki-topic name="**std::bind** and **std::placeholders**">
+    <ki-ref link="https://www.youtube.com/watch?v=1nNKeCFtBDI">
+      Good concise video tutorial about <ki-icode>std::bind</ki-icode> and <ki-icode>std::placeholders</ki-icode>.
+    </ki-ref>
+    <ki-ref link="https://en.cppreference.com/w/cpp/utility/functional/bind">
+      <strong>cppreference.com</strong> - On <ki-icode>std::bind</ki-icode>. 
+    </ki-ref>
+    <ki-ref link="https://cplusplus.com/reference/functional/bind/">
+      <strong>cplusplus.com</strong> - On <ki-icode>std::bind</ki-icode>. More concise than <em>cppreference.com</em> <ki-cite ref="@2"></ki-cite>.
+    </ki-ref>
+    <ki-ref link="https://en.cppreference.com/w/cpp/utility/functional/placeholders">
+      <strong>cppreference.com</strong> - On <ki-icode>std::placeholders</ki-icode>. 
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic id="gcc" name="GNU Compiler Collection (GCC)">
+    <ki-ref link="https://codingfreak.blogspot.com/2008/02/compilation-process-in-gcc.html">Quick introduction to building programs with GCC.</ki-ref>
+    <ki-ref link="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html">About building C/C++ programs with GCC and Make.</ki-ref>
+    <ki-ref link="https://github.com/google/sanitizers/wiki/AddressSanitizerLeakSanitizer">
+      About an useful compiler option for detecting memory leaks 
+    </ki-ref>
+    <ki-ref link="https://events.static.linuxfound.org/images/stories/pdf/lfcs2012_ccoutant.pdf">About using incremental linking with GCC.</ki-ref>
+
+    <ki-topic name="Default GCC Binaries on macOS">
+      <ki-ref link="https://stackoverflow.com/questions/64992467/mac-clang-installation-seems-to-override-gcc-install">
+        Discussion about running the default <em>gcc/g++</em> executables shipped with macOS.
+      </ki-ref>
+      It appears that the default <em>gcc/g++</em> binaries shipped with macOS are in fact simply running <em>clang</em>. See testing below.
+      <ki-code path="/content/c-plus-plus/gcc-binaries-on-macos.eg1.txt"></ki-code>
+    </ki-topic>
+  </ki-topic>
+  
   <ki-topic id="networking-in-cpp" name="Networking in C++ Applications">
-    <ki-reflist>
-      <ki-ref link="https://www.youtube.com/watch?v=2hNdkYInj4g">
-        <strong>Javidx9</strong>
-        demo. Networking in C++ Part #1.
-      </ki-ref>
-      <ki-ref link="https://www.youtube.com/watch?v=UbjxGvrDrbw">
-        <strong>Javidx9</strong>
-        demo. Networking in C++ Part #2.
-      </ki-ref>
-    </ki-reflist>
+    <ki-ref link="https://www.youtube.com/watch?v=2hNdkYInj4g">
+      <strong>Javidx9</strong>
+      demo. Networking in C++ Part #1.
+    </ki-ref>
+    <ki-ref link="https://www.youtube.com/watch?v=UbjxGvrDrbw">
+      <strong>Javidx9</strong>
+      demo. Networking in C++ Part #2.
+    </ki-ref>
   </ki-topic>
 </ki-section>
