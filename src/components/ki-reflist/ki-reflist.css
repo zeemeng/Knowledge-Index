@@ -6,7 +6,7 @@
   padding: 1.5rem 2rem;
 
   background: var(--bg-grey);
-  border-radius: 6px;
+  border-radius: var(--border-radius-md);
 }
 
 .ref > div:first-child {
