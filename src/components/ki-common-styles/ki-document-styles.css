@@ -39,7 +39,11 @@
   --sidebar-min-width: 285px;
   --sidebar-controls-height: 135px;
   --sidebar-transition-duration: 100ms;
-  --border-radius-standard: 8px;
+
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
 
   --container-width: 90%;
   --container-max-width: 1050px;

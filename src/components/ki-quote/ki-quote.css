@@ -1,0 +1,64 @@
+:host {
+  display: block;
+}
+
+.container {
+  padding: 2.5rem 4rem;
+  margin: 1.5rem 0;
+  background-color: var(--bg-grey);
+  border-radius: var(--border-radius-md);
+  position: relative;
+}
+
+.slot-container {
+  position: relative;
+}
+
+slot {
+  position: relative;
+  font-style: italic;
+}
+
+slot::before,
+slot::after {
+  font-size: 4em;
+  color: var(--grey-0);
+  position: absolute;
+  line-height: 100%;
+  font-style: normal;
+  font-weight: 600;
+}
+
+slot::before {
+  content: "“";
+  top: -0.2em;
+  left: -0.6em;
+}
+
+slot::after {
+  content: "„";
+  bottom: -0.2em;
+  right: -0.6em;
+}
+
+.src-label::before {
+  content: "—";
+  color: var(--grey-0);
+  margin-right: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.src-label {
+  text-align: right;
+  margin-top: 3rem;
+  color: var(--grey-0);
+  font-weight: 500;
+}
+
+.ref-src-label:hover {
+  cursor: pointer;
+  color: var(--blue-1);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}

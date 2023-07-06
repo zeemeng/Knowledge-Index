@@ -1,4 +1,4 @@
-# ki-ref
+# ki-cite
 
 ## Custom element HTML markup
 
