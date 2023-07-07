@@ -4,9 +4,9 @@
   "description": "Development server for 'Knowledge-Index' project",
   "main": "src/dev/server.js",
   "scripts": {
-    "prestart": "npm run setup",
     "start": "node src/dev/server.js",
     "build": "sh netlify-ci.sh",
+    "base": "npm run setup && npm start",
     "setup": "! test -f index.html.bk && ! test -d content && mv index.html index.html.bk && mv _index.html index.html && mv _content content",
     "cleanup": "! test -f _index.html && ! test -d _content && mv index.html _index.html && mv index.html.bk index.html && mv content _content"
   },
