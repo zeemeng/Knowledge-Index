@@ -1,5 +1,6 @@
 ki-topic p,
-ki-topic > div {
+ki-topic > div,
+ki-topic ki-prose {
   margin: 1.5rem 0;
 }
 

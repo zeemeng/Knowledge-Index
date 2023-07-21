@@ -98,6 +98,10 @@ a:hover {
   text-decoration-skip-ink: none;
 }
 
+:not(:defined) {
+  display: none;
+}
+
 @media (max-height: 800px) {
   :root {
     --navbar-height: 70px;

@@ -1,11 +1,6 @@
 import { KiRef } from "../ki-ref/ki-ref.js";
 import { KiReflist } from "../ki-reflist/ki-reflist.js";
-
-function isWhitespaceTextNode(node) {
-  if (node.nodeName !== "#text") return false;
-  if (/\S/.test(node.textContent)) return false; // textContent contains any non-whitespace character
-  return true;
-}
+import isWhitespaceTextNode from "./isWhitespaceTextNode.js";
 
 /**
  * Groups `KiRef` elements that are adjacent to each other and are immediate
