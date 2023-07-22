@@ -1,30 +1,134 @@
 <ki-section id="ds-and-algorithms" name="DS &amp; Algorithms" long-name="Data Structures and Algorithms">
-  <ki-topic id="sorting-algorithms" name="Sorting Algorithms">
-    <ki-topic id="bubble-sort" name="Bubble Sort">
-      <ki-reflist>
-        <ki-ref link="https://en.wikipedia.org/wiki/Bubble_sort">Theory of and general information about bubble sort.</ki-ref>
-        <ki-ref link="https://www.programiz.com/dsa/bubble-sort">Implementation tutorial of bubble sort.</ki-ref>
-      </ki-reflist>
+  <ki-topic name="Sorting Algorithms">
+    <ki-topic name="Bubble Sort">
+      <ki-ref link="https://en.wikipedia.org/wiki/Bubble_sort">Theory of and general information about bubble sort.</ki-ref>
+      <ki-ref link="https://www.programiz.com/dsa/bubble-sort">Implementation tutorial of bubble sort.</ki-ref>
     </ki-topic>
-    <ki-topic id="merge-sort" name="Merge Sort">
-      <ki-reflist>
-        <ki-ref link="https://en.wikipedia.org/wiki/Merge_sort#cite_note-1">Theory of and general information about merge sort.</ki-ref>
-        <ki-ref link="https://www.programiz.com/dsa/merge-sort">Implementation tutorial of merge sort.</ki-ref>
-        <ki-ref link="https://www.youtube.com/watch?v=k3oezbZgfDs">Implementation tutorial of merge sort with many optimizations.</ki-ref>
-        <ki-ref link="http://csg.sph.umich.edu/abecasis/class/2006/615.09.pdf">Supplementary general information PPT slides about merge sort.</ki-ref>
-      </ki-reflist>
+
+    <ki-topic name="Merge Sort">
+      <ki-ref link="https://en.wikipedia.org/wiki/Merge_sort#cite_note-1">Theory of and general information about merge sort.</ki-ref>
+      <ki-ref link="https://www.programiz.com/dsa/merge-sort">Implementation tutorial of merge sort.</ki-ref>
+      <ki-ref link="https://www.youtube.com/watch?v=k3oezbZgfDs">Implementation tutorial of merge sort with many optimizations.</ki-ref>
+      <ki-ref link="http://csg.sph.umich.edu/abecasis/class/2006/615.09.pdf">Supplementary general information PPT slides about merge sort.</ki-ref>
     </ki-topic>
-    <ki-topic id="quicksort" name="Quicksort">
-      <ki-reflist>
-        <ki-ref link="https://en.wikipedia.org/wiki/Quicksort">Theory of and general information about quicksort.</ki-ref>
-        <ki-ref link="https://www.programiz.com/dsa/quick-sort">Implementation tutorial of quicksort.</ki-ref>
-      </ki-reflist>
+
+    <ki-topic name="Quicksort">
+      <ki-ref link="https://en.wikipedia.org/wiki/Quicksort">Theory of and general information about quicksort.</ki-ref>
+      <ki-ref link="https://www.programiz.com/dsa/quick-sort">Implementation tutorial of quicksort.</ki-ref>
     </ki-topic>
-    <ki-topic id="counting-sort" name="Counting Sort">
-      <ki-reflist>
-        <ki-ref link="https://en.wikipedia.org/wiki/Counting_sort">Theory of and general information about counting sort.</ki-ref>
-        <ki-ref link="https://www.programiz.com/dsa/counting-sort">Implementation tutorial of counting sort.</ki-ref>
-      </ki-reflist>
+
+    <ki-topic name="Counting Sort">
+      <ki-ref link="https://en.wikipedia.org/wiki/Counting_sort">Theory of and general information about counting sort.</ki-ref>
+      <ki-ref link="https://www.programiz.com/dsa/counting-sort">Implementation tutorial of counting sort.</ki-ref>
+    </ki-topic>
+  </ki-topic>
+
+  <ki-topic name="Graphs">
+    <ki-topic name="Graph Representations">
+      <ki-ref link="https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs">
+        Excellent article about various graph representations.
+      </ki-ref>
+      <ki-ref link="https://algodaily.com/lessons/implementing-graphs-edge-list-adjacency-list-adjacency-matrix">
+        About graph representations.
+      </ki-ref>
+      <ki-ref link="https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/">
+        About graph representations.
+      </ki-ref>
+      <ki-ref link="https://networkx.org/documentation/stable/reference/readwrite/edgelist.html">
+        About edge list and some extra considerations to be taken into account when using this method of representing graphs.
+      </ki-ref>
+    </ki-topic>
+
+    <ki-topic name="Breadth-first Search">
+      <ki-ref link="https://en.wikipedia.org/wiki/Breadth-first_search">
+        About breadth-first search.
+      </ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/8922060/how-to-trace-the-path-in-a-breadth-first-search">
+        Discussion about <em>How to trace the path in a Breadth-First Search?</em>.
+      </ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/8379785/how-does-a-breadth-first-search-work-when-looking-for-shortest-path">
+        Discussion about <em>How does a Breadth-First Search work when looking for Shortest Path?</em>.
+      </ki-ref>
+    </ki-topic>
+
+    <ki-topic name="Depth-first Search">TBW</ki-topic>
+
+    <ki-topic name="Shortest Path Algorithms">
+      <ki-topic name="Topological Order Relaxation">
+        <ki-ref link="https://www.youtube.com/watch?v=2E7MmKv0Y24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1056s">
+          <strong>MIT OpenCourseWare</strong> - About using topological order relaxation for directed acyclic graphs (DAG).
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=eL-KzMXSXXI">
+          About topological sorting.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="Breadth-first Search">
+        See topic about, <ki-link path="#breadth-first-search"></ki-link>.
+      </ki-topic>
+
+      <ki-topic name="Dijkstra">
+        <ki-ref link="https://www.youtube.com/watch?v=GazC3A4OQTE">
+          <strong>Computerphile</strong> - Hosted by Mike Pound, explanation and demonstration of Dijkstra's algorithm. Contains a mistake at the end of the demonstration, where the algorithm is stopped prematurely as soon as the end node has been found. Instead the algorithm should have continued and only stop when the end node has been dequeued from the priority queue data structure used in the algorithm.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=2E7MmKv0Y24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb">
+          <strong>MIT OpenCourseWare</strong> - Dijkstra
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=CHvQ3q_gJ7E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb">
+          <strong>MIT OpenCourseWare</strong> - About speeding up Dijkstra's algorithm.
+        </ki-ref>
+        <ki-ref link="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">
+          About Dijkstra's algorithm.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="A* (A-star)">
+        <ki-ref link="https://www.youtube.com/watch?v=ySN5Wnu88nE">
+          <strong>Computerphile</strong> - Hosted by Mike Pound, explanation and demonstration of the A* algorithm.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=-L-WgKMFuhE">
+          Excellent tutorial on the A* algorithm, with visual demonstration.
+        </ki-ref>
+        <ki-ref link="https://en.wikipedia.org/wiki/A*_search_algorithm">
+          Wikipedia article about A*.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="Bellman-Ford">
+        <ki-ref link="https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb">
+          <strong>MIT OpenCourseWare</strong> - Bellman-Ford
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=lyw4FaxrwHg">
+          Demonstration and tutorial about the Bellman-Ford algorithm.
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=9PHkk0UavIM">
+          Explanation of the Bellman-Ford algorithm (theory).
+        </ki-ref>
+        <ki-ref link="https://www.youtube.com/watch?v=obWXjtg0L64">
+          Step-by-step example of the Bellman-Ford algorithm.
+        </ki-ref>
+        <ki-ref link="https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm">
+          Wikipedia article about the Bellman-Ford algorithm.
+        </ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/20371647/how-to-get-the-actual-path-found-by-bellman-ford">
+          Discussion about <em>How to get the actual path found by Bellman-Ford</em>.
+        </ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/41758089/can-bellman-ford-algorithm-have-any-arbitary-order-of-edges">
+          Discussion about whether edges can be processed/relaxed in arbitrary order in the Bellman-Ford algorithm.
+        </ki-ref>
+        <ki-ref link="https://cs.stackexchange.com/questions/6894/bellman-ford-algorithm-why-can-edges-be-updated-out-of-order">
+          Discussion about whether edges can be processed/relaxed in arbitrary order in the Bellman-Ford algorithm.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
+
+    <ki-topic name="Python Graph/Network Libraries">
+      <ki-ref link="https://wiki.python.org/moin/PythonGraphLibraries">
+        About popular Python libraries for working with graphs/networks.
+      </ki-ref>
+      <ki-ref link="https://wiki.python.org/moin/PythonGraphApi">
+        Lists additional Python libraries for working with graphs/networks.
+      </ki-ref>
     </ki-topic>
   </ki-topic>
 </ki-section>
