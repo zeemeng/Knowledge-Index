@@ -192,24 +192,83 @@
     <div>See <ki-link path="/infosec#create-sign-certificate-openssl">§ Create and Sign Digital Certificate Using <em>openssl</em></ki-link>.</div>
   </ki-topic>
   <ki-topic id="openssh" name="OpenSSH">
-    <ki-reflist>
-      <ki-ref link="https://en.wikipedia.org/wiki/OpenSSH">About OpenSSH.</ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/Secure_Shell">
+      Wikipedia article about the Secure Shell Protocol (SSH).
+    </ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/OpenSSH">
+      Wikipedia article about OpenSSH.
+    </ki-ref>
+    <ki-ref link="https://www.devdungeon.com/content/how-specify-ssh-key-git-repository">
+      Good tutorial on using an OpenSSH config file to authenticate with GitHub using a custom identity file.
+    </ki-ref>
+
+    <ki-topic name="SSH Client">
+      <ki-ref link="https://www.ssh.com/academy/ssh/config">
+        About configuring the SSH client.
+      </ki-ref>
+      <ki-ref link="https://www.man7.org/linux/man-pages/man5/ssh_config.5.html">
+        Manpage: <em>ssh_config — OpenSSH client configuration file</em>
+      </ki-ref>
+
+      <ki-topic name="**known_hosts file**">
+        <ki-ref link="https://www.ibm.com/docs/en/zos/2.3.0?topic=daemon-ssh-known-hosts-file-format">
+          About the file <ki-icode>known_hosts</ki-icode> and the format of its contents.
+        </ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/33243393/what-is-actually-in-known-hosts">
+          About the file <ki-icode>known_hosts</ki-icode>.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
+
+    <ki-topic name="SSH Daemon">
+      <ki-ref link="https://www.ssh.com/academy/ssh/sshd_config">
+        About configuring the SSH server daemon.
+      </ki-ref>
+      <ki-ref link="https://man7.org/linux/man-pages/man5/sshd_config.5.html">
+        Manpage: <em>sshd_config — OpenSSH daemon configuration file</em>
+      </ki-ref>
+
+      <ki-topic name="Hardening SSH">
+        <ki-ref link="https://goteleport.com/blog/ssh-hardening-to-prevent-brute-force-attacks/">
+          About hardening SSH servers.
+        </ki-ref>
+        <ki-ref link="https://serverfault.com/questions/275669/ssh-sshd-how-do-i-set-max-login-attempts">
+          Discussion about limiting the login attempts to an SSH server.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
+
+    <ki-topic name="**ssh-keygen**">
+      <ki-topic name="Checking SSH Key Fingerprint">
+        <ki-ref link="https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.2/administration/GUID-8F3D860E-4F01-452E-A54D-A45FF455F8EB.html">
+          About checking SSH key fingerprints and finding the key fingerprints of a remote server.
+        </ki-ref>
+        <ki-ref link="https://www.omecha.info/blog/ssh-fingerprint-howto.html">
+          About checking SSH key fingerprints and finding the key fingerprints of a remote server.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
+
+    <ki-topic name="**ssh-agent**">
       <ki-ref link="https://en.wikipedia.org/wiki/Ssh-agent">
-        About <ki-icode>ssh-agent</ki-icode>. A running process which may be used to store decrypted identity files/private keys in memory for use across multiple remote-login sessions,
-        such that passphrases needed to decrypt hashed identity files need only be entered once per login session on the user's local machine.
+        About <ki-icode>ssh-agent</ki-icode>. A running process which may be used to store decrypted identity files/private keys in memory for use across multiple remote-login sessions, such that passphrases needed to decrypt identity files need only be entered once per login session on the user's local machine.
       </ki-ref>
-      <ki-ref link="https://unix.stackexchange.com/questions/58969/how-to-list-keys-added-to-ssh-agent-with-ssh-add">
-        About "how to list keys added to ssh-agent with ssh-add".
+      <ki-ref link="https://www.ssh.com/academy/ssh/agent">
+        About the <ki-icode>ssh-agent</ki-icode> program.
       </ki-ref>
-      <ki-ref link="https://www.ssh.com/academy/ssh/config">About using config files for OpenSSH.</ki-ref>
-      <ki-ref link="https://www.devdungeon.com/content/how-specify-ssh-key-git-repository">
-        Example of using an OpenSSH config file to authenticate with GitHub using a custom identity file.
+    </ki-topic>
+
+    <ki-topic name="SSH Tunneling">
+      <ki-ref link="https://www.ssh.com/academy/ssh/tunneling">
+        About SSH tunneling/port forwarding.
       </ki-ref>
-      <ki-ref link="https://www.ibm.com/docs/en/zos/2.3.0?topic=daemon-ssh-known-hosts-file-format">
-        About the file <ki-icode>known_hosts</ki-icode> and the format of its contents.
+      <ki-ref link="https://unix.stackexchange.com/questions/115897/whats-ssh-port-forwarding-and-whats-the-difference-between-ssh-local-and-remot">
+        Discussion about SSH tunneling/port forwarding, with good examples and diagrams.
       </ki-ref>
-      <ki-ref link="https://stackoverflow.com/questions/33243393/what-is-actually-in-known-hosts">About the file <ki-icode>known_hosts</ki-icode>.</ki-ref>
-    </ki-reflist>
+      <ki-ref link="https://unix.stackexchange.com/questions/685268/ssh-tunnel-port-forwarding-in-background">
+        Discussion about SSH tunneling/port forwarding as a background process.
+      </ki-ref>
+    </ki-topic>
   </ki-topic>
   <ki-topic id="git" name="Git">
     <ki-topic id="git-introduction" name="Introduction to and Usage of Git">
