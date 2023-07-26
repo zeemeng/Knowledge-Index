@@ -197,6 +197,65 @@
         </ki-reflist>
       </ki-topic>
     </ki-topic>
+    <ki-topic name="Let's Encrypt (Certificate Authority)">
+      <ki-ref link="https://en.wikipedia.org/wiki/Let's_Encrypt">
+        Wikipedia article about <em>Let's Encrypt</em>.
+      </ki-ref>
+      <ki-ref link="https://letsencrypt.org/docs/client-options/">
+        Official documentation about the ACME protocol and client implementations, which includes an extensive list of client options.
+      </ki-ref>
+      <ki-ref link="https://letsencrypt.org/docs/rate-limits/">
+        Official article about <em>Let's Encrypt</em>'s rate limits.
+      </ki-ref>
+
+      <ki-topic name="Certbot">
+        <ki-ref link="https://certbot.eff.org/instructions">
+          Installation instructions for various platforms.
+        </ki-ref>
+        <ki-ref link="https://eff-certbot.readthedocs.io/en/stable/">
+          Official Certbot documentations.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="About IP Address Certificates">
+        <ki-ref link="https://www.geocerts.com/support/ip-address-in-ssl-certificate">
+          About the possibility of purchasing an IP address certificate from a commercial CA.
+        </ki-ref>
+        <ki-ref link="https://sectigostore.com/page/ssl-certificate-for-ip-address/">
+          About the possibility of purchasing an IP address certificate from a commercial CA.
+        </ki-ref>
+        <ki-ref link="https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.6">
+          IETF RFC 5280, specifying that IP addresses may be used as values to the <em>SubjectAltName</em> field of certificates.
+        </ki-ref>
+        <ki-ref link="https://community.letsencrypt.org/t/certificate-for-public-ip-without-domain-name/6082">
+          Discussion about the non-availability of IP address certificates from <em>Let's Encrypt</em>.
+        </ki-ref>
+        <ki-ref link="https://community.letsencrypt.org/t/subject-alternative-name-san-field-type-ipaddress-ip-in-a-csr/38099">
+          Discussion about the non-availability of IP address certificates from <em>Let's Encrypt</em>.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="Revoking Certificates">
+        <ki-ref link="https://letsencrypt.org/docs/revoking/">
+          Official <em>Let's Encrypt</em> documentation about revoking certificates.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="Certificate Transparency Logs and Monitoring Tools">
+        <ki-ref link="https://www.sectigo.com/resource-library/root-causes-216-what-is-crt-sh">
+          Excellent podcast explaining CT logs and monitoring tools.
+        </ki-ref>
+        <ki-ref link="https://crt.sh/">
+          A free service for CT logs searching and monitoring.
+        </ki-ref>
+        <ki-ref link="https://community.letsencrypt.org/t/duplicates-in-ct-logs-precertificate-vs-leaf-certificate/69190">
+          Discussion about "leaf certificate" and "precertificate" entries in search results when looking up a domain on <em>crt.sh</em>.
+        </ki-ref>
+        <ki-ref link="https://www.thesslstore.com/blog/ssl-precertificates/">
+          Article about <em>What are SSL Precertificates</em>.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
   </ki-topic>
   <ki-topic id="tls-ssl" name="Transport Layer Security (TLS/SSL) Protocol">
     <ki-reflist>
