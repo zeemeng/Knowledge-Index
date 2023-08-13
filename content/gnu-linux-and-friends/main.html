@@ -504,6 +504,48 @@
       </ki-reflist>
     </ki-topic>
   </ki-topic>
+  <ki-topic name="KVM/QEMU/virt-manager Virtualization Stack">
+    <ki-ref link="https://wiki.debian.org/KVM">
+      Debian guide on using <em>KVM</em>.
+    </ki-ref>
+    <ki-ref link="https://wiki.archlinux.org/title/QEMU">
+      <strong>Arch Wiki</strong> - Guide on using <em>QEMU</em>.
+    </ki-ref>
+    <ki-ref link="https://ostechnix.com/how-to-manage-kvm-virtual-machines-with-virt-manager/">
+      Article about using <em>virt-manager</em> to manage virtual machines.
+    </ki-ref>
+
+    <ki-prose>
+      <em>KVM</em>, <em>QEMU</em>, and <em>virt-manager</em> constitute the main components of an efficient and performant virtualization solution for Linux host machines. Kernel-based Virtual Machine, or <em>KVM</em>, is a low-level virtual machine hypervisor that operates as a loadable Linux kernel module and provides the core virtualization infrastructure in this stack. <em>QEMU</em> integrates with <em>KVM</em> and provides machine and device emulation. Finally, <em>virt-manager</em> is a user friendly GUI front-end for the open-source <em>libvirt</em> API that is designed as a common interface/solution to manage various hypervisors and virtualization platforms, including <em>KVM/QEMU</em>.
+
+      When using the <em>APT</em> package manager to install the different components of this virtualization solution, it is sufficient to simply install <em>virt-manager</em> (i.e. <ki-icode>apt install virt-manager</ki-icode>), as the other components will be automatically pulled in as dependencies.
+
+      After all the components have been installed, it is important to add relevent users to the <ki-icode>libvirt</ki-icode> user group to allow them to manage virtual machines.<ki-cite ref="@1"></ki-cite>
+    </ki-prose>
+
+    <ki-topic name="Auto Resizing of VM Display Resolution">
+      <ki-ref link="https://superuser.com/questions/1725915/auto-resize-vm-with-windows-greyed-out-since-graphics-type-vnc-does-not-supp">
+        Discussion about enabling auto resizing of guest VM resolution. A good solution is provided in the answer.
+      </ki-ref>
+      <ki-ref link="https://www.linux-kvm.org/page/WindowsGuestDrivers/Download_Drivers">
+        Official KVM page about obtaining VirtIO drivers for Windows guest systems.
+      </ki-ref>
+      <ki-ref link="https://github.com/virtio-win/virtio-win-pkg-scripts">
+        GitHub repository providing binary drivers for Windows guest systems.
+      </ki-ref>
+      <ki-ref link="https://www.spice-space.org/download.html">
+        Official SPICE project page providing QXL video driver and SPICE agent software for VM guest systems.
+      </ki-ref>
+
+      To enable auto resizing of the display resolution of VM guest systems according to the dimensions of the client window on the host system, some additional pieces of software need to be installed on the guest. These are the <strong>VirtIO driver</strong>, <strong>QXL video driver</strong>, and the <strong>SPICE agent</strong>.<ki-cite ref="@1"></ki-cite><ki-cite ref="@2"></ki-cite><ki-cite ref="@3"></ki-cite> With the guest software installed, the VM's video setting needs to be configured to use <em>QXL</em> and a <em>channel</em> for the SPICE guest agent may need to be configured (using <em>virt-manager</em>).
+    </ki-topic>
+
+    <ki-topic name="Changing **libvirt** Default Storage Pool Location">
+      <ki-ref link="https://ostechnix.com/how-to-change-kvm-libvirt-default-storage-pool-location/">
+        Good article about changing the default storage pool location for the <em>libvirt</em> interface.
+      </ki-ref>
+    </ki-topic>
+  </ki-topic>
   <ki-topic id="gnu-linux-benchmarking" name="Benchmarking Tools for GNU/Linux Systems">
     <ki-reflist>
       <ki-ref link="https://wiki.archlinux.org/title/Benchmarking">
