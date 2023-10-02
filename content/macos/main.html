@@ -1,0 +1,126 @@
+<ki-section name="macOS">
+  <ki-topic name="**PATH** Environment Variable">
+    <ki-ref link="https://scriptingosx.com/2017/05/where-paths-come-from/">
+      About the building of the <ki-icode>PATH</ki-icode> environment variable on macOS.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="Package Managers">
+    <ki-topic name="Homebrew">
+      <ki-ref link="https://brew.sh/">
+        Homebrew project home page.
+      </ki-ref>
+
+      <ki-prose>
+        Functions somewhat similarly to Arch's pacman/PKGBUILDS. Package repositories in the HB system, called taps, consists of git repositories to which contributors of HB package definitions, called formulae, can make pull requests.
+      </ki-prose>
+
+      <ul>
+        <li>The <ki-icode>brew</ki-icode> CLI is analogous to <ki-icode>pacman</ki-icode></li>
+        <li>HB's <em>formula</em> is analogous to <em>PKGBUILD</em>. It describes how to build a particular package from upstream sources (the source could be a tarball)</li>
+        <li>A <em>keg</em> is a name with version prefix for a package described by a <em>formula</em></li>
+        <li>A <em>bottle</em> is a pre-built <em>keg</em> which could be fetched during install instead of building from sources</li>
+        <li>A <em>cask</em> is a HB package definition like <em>formula</em>, but for macOS native applications (such as GUIs)</li>
+        <li>A <em>tap</em> is a Git repository of <em>formulae</em>, <em>taps</em> and/or commands</li>
+      </ul>
+
+      <ki-prose>
+        HB's default/main "tap" is called "homebrew-core" a Github repository of the "Homebrew" organisation.
+
+        Any person can make pull requests to "homebrew-core" following some guidelines. PRs to "homebrew-core" need to be merged by a "HB maintainer" or be approved by one to be merged.
+
+        Note that unlike the official Arch repositories, for the HB official/main repository, there is no multi-tier system to segregate packages submitted by the average user and packages which could be deemed of higher significance due to security or popularity concerns.
+
+        HB will tend to use MacOS system-wide shared libraries for its packages' dependencies if such libraries exist instead of duplicating them. However, <strong>"OpenSSL" and "LibreSSL" are special exceptions</strong>, whereby HB provides and uses its own version.
+
+        A person can become a "HB maintainer" through the invitation of an existing "HB maintainer". "HB maintainers" are <strong>encouraged</strong> to meet each other in person when occasions allow in the interest of "loosely" verifying maintainer identity. Although this is not enforced, in contrast to other communities such as Debian.
+      </ki-prose>
+
+      <ki-topic name="Governance">
+        <ki-prose>Bodies within the HB governance structure include:</ki-prose>
+
+        <ul>
+          <li>Project Leader: an individual annually elected by "HB members" (no office term limits)</li>
+          <li>Project Leadership Committee: five members elected from and by "HB members"</li>
+          <li>Technical Steering Committe: between three and five "HB  maintainers" appointed by the PLC</li>
+          <li>HB maintainer: an individual invited by an existing "HB maintainer"</li>
+          <li>HB members: all "HB maintainers" are members, non-maintainers may be admitted by a vote of existing members</li>
+        </ul>
+      </ki-topic>
+
+      <ki-topic name="Binary Package Security">
+        <ki-ref link="https://docs.brew.sh/Bottles">
+          About homebrew binary packages (i.e. <em>bottles</em>).
+        </ki-ref>
+        <ki-ref link="https://jonathanchang.org/blog/continuous-integration-using-github-actions-for-homebrew-on-linux/">
+          About the standard <em>bottle</em> creation workflow for Homebrew.
+        </ki-ref>
+        <ki-ref link="https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/">
+          About the standard <em>bottle</em> creation workflow for Homebrew.
+        </ki-ref>
+        <ki-ref link="https://repos.openssf.org/proposals/build-provenance-and-code-signing-for-homebrew.html">
+          Formal proposal to implement binary package signing in Homebrew.
+        </ki-ref>
+        <ki-ref link="https://news.ycombinator.com/item?id=34817788">
+          Discussion about lack of binary package signing in Homebrew.
+        </ki-ref>
+        <ki-ref link="https://news.ycombinator.com/item?id=34817222">
+          Discussion about Homebrew, with comments about its security and comparisons with other package managers available on macOS.
+        </ki-ref>
+        <ki-ref link="https://github.com/Homebrew/homebrew-core/commits/442f9cc511ce6dfe75b96b2c83749d90dde914d2/Formula/tmux.rb">
+          Commit history for an example <em>formula</em>, <em>tmux</em>.
+        </ki-ref>
+        <ki-ref link="https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification">
+          About GitHub's commit signature verification.
+        </ki-ref>
+
+        <ki-prose>
+          Assuming that Homebrew's build/CI infrastructure and maintainers who have commit access to Homebrew's official repos are trusted parties. Official Homebrew <em>bottles</em> derives trust from the fact that the hash of each <em>bottle</em> is embedded in the package's <em>formula</em>, and although any contributor can author a commit and thus change the hash for a <em>bottle</em>, it is assumed that trusted parties with commit access to official repos would vet the authenticity, integrity, and safety of a <em>formula</em>'s content before pushing it to the official repos (big assumption here). Further, the official build/CI infrastructure and some maintainers sign their git commits with GPG keys to authenticate such code changes.
+
+          In this security model, the user needs to trust the build/CI infrastructure and the maintainers with the security and authenticity of both the <em>formulae</em> and the <em>bottles</em>. This is more lax compared to MacPorts' security model with respect to binary packages, where the user only needs to trust the maintainers for the <em>port</em> definitions (analogous to <em>formulae</em>), and to trust the build/CI infrastructure for the binary package authenticity, since MacPorts binary packages are cryptographically signed by the build/CI infrastructure.
+
+          On the other hand, Homebrew does not execute <em>formulae</em> with root privileges, while MacPorts does need to execute <em>port</em> definitions with root privileges.
+        </ki-prose>
+      </ki-topic>
+    </ki-topic>
+
+    <ki-topic name="MacPorts">
+      <ki-ref link="https://www.macports.org/">
+        MacPorts project home page.
+      </ki-ref>
+      <ki-ref link="https://guide.macports.org/index.html">
+        Good and thorough official MacPorts guide.
+      </ki-ref>
+      <ki-ref link="https://trac.macports.org/wiki/FAQ">
+        MacPorts FAQ.
+      </ki-ref>
+      <ki-ref link="https://trac.macports.org/wiki/MacPortsDevelopers">
+        Current MacPorts project team.
+      </ki-ref>
+      <ki-ref link="https://trac.macports.org/wiki/NewCommittersGuide">
+        Responsibilities of and application procedure for project repository committers.
+      </ki-ref>
+
+      <ki-topic name="Binary Package Security">
+        <ki-ref link="https://trac.macports.org/wiki/BinaryArchives">
+          About MacPorts binary archives.
+        </ki-ref>
+        <ki-ref link="https://trac.macports.org/wiki/archives">
+          About creating self-maintained binary archives and signing binary packages.
+        </ki-ref>
+        <ki-ref link="https://trac.macports.org/wiki/howto/ShareArchives2">
+          About creating self-maintained binary archives and signing binary packages.
+        </ki-ref>
+        <ki-ref link="https://trac.macports.org/browser/trunk/base/doc/pubkeys.conf.in">
+          About the location of public key(s) used to verify the authenticity of binary packages.
+        </ki-ref>
+      
+        <ki-prose>
+          Official MacPorts binary packages are cryptographically signed by the project's build/CI infrastructure. This provides a better security model than the Homebrew project with respect to trusting officially distributed binary packages (see <em>Binary Package Security</em> sub-topic of the <em>Homebrew</em> topic).
+
+          On the other hand, <em>ports</em> need to be installed with root privileges, thus <em>port</em> definitions will run with such elevated privileges, while for the Homebrew project, installation of packages does not required root privileges.
+        </ki-prose>
+      </ki-topic>
+    </ki-topic>
+  </ki-topic>
+</ki-section>
