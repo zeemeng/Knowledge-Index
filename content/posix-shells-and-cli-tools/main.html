@@ -1,34 +1,38 @@
-<ki-section id="shells" name="POSIX Shells &amp; CLI Tools" long-name="POSIX Shells and CLI Tools">
-  <ki-topic id="shells-scope-and-context" name="Subject Scope and Context">
-    <ki-reflist>
-      <ki-ref link="https://en.wikipedia.org/wiki/Shell_(computing)">Excellent article about the concept of "shell" in computing.</ki-ref>
-      <ki-ref link="https://en.wikipedia.org/wiki/Command-line_interface">
-        A comprehensive, but lengthy article about command-line interface (CLI).
-      </ki-ref>
-      <ki-ref link="https://en.wikipedia.org/wiki/Unix_shell">About Unix shells.</ki-ref>
-      <ki-ref link="https://en.wikipedia.org/wiki/Bourne_shell">About the Bourne shell.</ki-ref>
-      <ki-ref link="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">About the Bash shell.</ki-ref>
-    </ki-reflist>
-    <p>
-      This subject section only treats
-      <strong>command-line</strong>
-      shells and matters related to these. This subject section treats any command-line shell available on any computing system, as well as shell
-      scripting features and other programs which may be used with or in said command-line shells.
-    </p>
-    <p>
-      However, the main focus of the present section is on the "Unix shell" and more specifically on the "Bourne Again Shell" (Bash), which is default
-      command-line shell of many GNU/Linux distributions. As such, in the context of this subject section, the term
-      <strong><em>shell</em></strong>
-      when used without qualifiers or without notes which states otherwise, shall refer to the Bash shell.
-    </p>
-    <p>
-      Note that command-line programs which relate to configuring, installing and modifying the OS kernel and core OS features and modules of a
-      Unix-like (e.g. GNU/Linux) system are not presented in this section. They are be presented in the subject section
-      <ki-link path="/linux-and-friends"><em>GNU/Linux and Friends</em></ki-link>
-      .
-    </p>
+<ki-section id="unix-shells-and-utilities" name="Unix Shells &amp; Utilities" long-name="Unix Shells and Utilities">
+  <ki-topic name="Unix Shells">
+    <ki-ref link="https://en.wikipedia.org/wiki/Shell_(computing)">
+      Excellent article about the concept of "shell" in computing.
+    </ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/Command-line_interface">
+      A comprehensive, but lengthy article about command-line interface (CLI).
+    </ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/Unix_shell">About Unix shells.</ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/Bourne_shell">About the Bourne shell.</ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">About the Bash shell.</ki-ref>
   </ki-topic>
-  <ki-topic name="POSIX">
+
+  <ki-topic name="Single UNIX Specification">
+    <ki-ref link="https://en.wikipedia.org/wiki/Unix">
+      Wikipedia article about Unix.
+    </ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/Single_UNIX_Specification">
+      Wikipedia article about the <em>Single UNIX Specification</em>, certified compliance of which is required for a system to use the tradmark <em>UNIX</em>.
+    </ki-ref>
+    <ki-ref link="https://www.opengroup.org/membership/forums/platform/unix">
+      About the Single UNIX Specification (SUS).
+    </ki-ref>
+    <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">
+      The SUS's <em>Base Specifications</em>, Issue 7, 2018 edition, also recognized as POSIX.1-2017 and IEEE Std 1003.1-2017.
+    </ki-ref>
+    <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699909599/toc.pdf">
+      The SUS's <em>X/Open Curses</em>, Issue 7.
+    </ki-ref>
+    <ki-ref link="https://en.wikipedia.org/wiki/The_Unix_Programming_Environment">
+      An interesting book about Unix that should be read.
+    </ki-ref>
+  </ki-topic>
+
+  <ki-topic name="POSIX.1">
     <ki-ref link="https://en.wikipedia.org/wiki/POSIX">
       Wikipedia article about POSIX.
     </ki-ref>
@@ -39,45 +43,167 @@
     <ki-quote src="@1">
       The Portable Operating System Interface (POSIX; IPA: /ˈpɒz.ɪks/) is a family of standards specified by the IEEE Computer Society for maintaining compatibility between operating systems. POSIX defines both the system and user-level application programming interfaces (APIs), along with command line shells and utility interfaces, for software compatibility (portability) with variants of Unix and other operating systems. POSIX is also a trademark of the IEEE. POSIX is intended to be used by both application and system developers.
     </ki-quote>
+
+    <ki-topic name="POSIX Shell Command Language">
+      <ki-topic name="POSIX Regular Expressions">
+        <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html">
+          <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - <em>Regular Expressions</em>
+        </ki-ref>
+        <ki-ref link="https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions">
+          Good concise article about POSIX regular expressions.
+        </ki-ref>
+        <ki-ref link="https://www.regular-expressions.info/posixbrackets.html">
+          Good article about POSIX <em>RE bracket expression</em> and <em>character class</em>.
+        </ki-ref>
+
+        <ki-topic name="Matching String Against RE in POSIX Shell">
+          <ki-ref link="https://unix.stackexchange.com/questions/648985/shellscript-match-regex">
+            Discussion about matching RE in POSIX shell script and difference between BRE, ERE, and PCRE.
+          </ki-ref>
+          <ki-ref link="https://stackoverflow.com/questions/27373780/what-is-the-regex-matching-operator-in-bourne-shell-script">
+            Discussion about how to match a string against a RE in POSIX shell script.
+          </ki-ref>
+        </ki-topic>
+      </ki-topic>
+
+      <ki-topic name="Special Built-in Utilities">
+        <ki-topic name="dot">
+          <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot">
+            <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - <em>dot</em>
+          </ki-ref>
+        </ki-topic>
+      </ki-topic>
+
+      <ki-topic name="Job Control">
+        <ki-ref link="https://missing.csail.mit.edu/2020/command-line/">
+          Excellent lecture about the command-line environment from MIT, which includes a section on job control.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="Avoiding Use of Pipelines When Setting Variables">
+        <ki-ref link="https://mywiki.wooledge.org/BashFAQ/024">
+          <em>I set variables in a loop that's in a pipeline. Why do they disappear after the loop terminates? Or, why can't I pipe data to read?</em>
+        </ki-ref>
+        <ki-ref link="https://unix.stackexchange.com/questions/309547/what-is-the-portable-posix-way-to-achieve-process-substitution">
+          Discussion about achieving the effect of Bash <em>process substitution</em> in POSIX shell.
+        </ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/38796224/posix-shell-equivalent-to">
+          Discussion about achieving the effect of Bash <em>process substitution</em> in POSIX shell.
+        </ki-ref>
+
+        Since each command of a multi-command pipeline is executed in a subshell environment, variables that are set in such a command are lost when that command exits. This is of concern when piping input into a <ki-icode>read</ki-icode> command and when a command of a multi-command pipeline is a loop construct within which variables are set and expected to persist when the loop exits.
+      </ki-topic>
+
+      <ki-topic name="FIFO (Named Pipe)">
+        <ki-ref link="https://mywiki.wooledge.org/NamedPipes">
+          About named pipes.
+        </ki-ref>
+        <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/">
+          <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - mkfifo
+        </ki-ref>
+        <ki-ref link="https://stackoverflow.com/questions/61607658/why-remove-the-fifo-file-instantly-after-attaching-to-a-file-descriptor">
+          Discussion about removing a FIFO immediately after attaching it to a file descriptor.
+        </ki-ref>
+        <ki-ref link="https://superuser.com/questions/184307/bash-create-anonymous-fifo">
+          Discussion about various approaches to create "anonymous" FIFOs.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
+
+    <ki-topic name="Mandatory Directories, Files and Devices">
+      <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap10.html">
+        <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - <em>Directory Structure and Files</em>
+      </ki-ref>
+      <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap02.html">
+        <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - About standards conformance requirements and non-standard extensions. This chapter specifically mentions that the files <ki-icode>/dev/stdin</ki-icode>, <ki-icode>/dev/stdout</ki-icode>, and <ki-icode>/dev/stderr</ki-icode> are non-standard.
+      </ki-ref>
+    </ki-topic>
+
+    <ki-topic name="File Descriptor">
+      <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_166">
+        <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - Definition of <em>File Descriptor</em>.
+      </ki-ref>
+      <ki-ref link="https://en.wikipedia.org/wiki/File_descriptor">
+        Wikipedia article about <em>file descriptor</em>.
+      </ki-ref>
+      <ki-ref link="https://stackoverflow.com/questions/7082001/how-do-file-descriptors-work">
+        Discussion about how file descriptors work.
+      </ki-ref>
+    </ki-topic>
+
+    <ki-topic name="Standard Utilities">
+      <ki-topic name="**awk**">
+        See <ki-link path="#data-wrangling_**awk**">Data Wrangling --> awk</ki-link>.
+      </ki-topic>
+
+      <ki-topic name="**sed**">
+        See <ki-link path="#data-wrangling_**sed**">Data Wrangling --> sed</ki-link>.
+      </ki-topic>
+
+      <ki-topic name="**xargs**">
+        <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/xargs.html">
+          <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - <em>xargs</em>
+        </ki-ref>
+        <ki-ref link="https://linux.die.net/man/1/xargs">Manpage for <ki-icode>xargs</ki-icode>.</ki-ref>
+      </ki-topic>
+
+      <ki-topic name="**printf**">
+        <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/printf.html">
+          <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - <em>printf</em>
+        </ki-ref>
+        <ki-ref link="https://linuxize.com/post/bash-printf-command/">
+          Good article explaining how to use <ki-icode>printf</ki-icode>.
+        </ki-ref>
+      </ki-topic>
+
+      <ki-topic name="**getopts**">
+        <ki-ref link="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/getopts.html">
+          <strong>Open Group Base Specifications Issue 7, 2018 edition</strong> - <em>getopts</em>
+        </ki-ref>
+        <ki-ref link="https://en.wikipedia.org/wiki/Getopts">
+          Wikipedia article about <ki-icode>getopts</ki-icode>, contains usage examples and a comparison table for various implementations of <ki-icode>getopts</ki-icode> on different platforms and their feature set.
+        </ki-ref>
+        <ki-ref link="https://www.howtogeek.com/778410/how-to-use-getopts-to-parse-linux-shell-script-options/">
+          Good tutorial about using <ki-icode>getopts</ki-icode>.
+        </ki-ref>
+      </ki-topic>
+    </ki-topic>
   </ki-topic>
-  <ki-topic name="Shell Configuration Files">
-    <ki-ref link="https://linuxize.com/post/bashrc-vs-bash-profile/">
-      About config files for the Bash shell.
+
+  <ki-topic name="Bash">
+    <ki-ref link="https://missing.csail.mit.edu/2020/shell-tools/">
+      Excellent intro tutorial to shell scripting. (MIT lecture)
     </ki-ref>
-  </ki-topic>
-  <ki-topic id="shell-options" name="Shell Options">
-    <ki-reflist>
-      <ki-ref link="https://bash.cyberciti.biz/guide/Setting_shell_options">About setting shell options.</ki-ref>
+    <ki-ref link="https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html">
+      About making portable shell scripts.
+    </ki-ref>
+    <ki-ref link="https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">
+      Good, concise tutorials about Bash scripting.
+    </ki-ref>
+    <ki-ref link="https://koenwoortman.com/bash-script-data-types/">
+      Article about data types wrt. Bash scripting.
+    </ki-ref>
+
+    <ki-topic name="Configuration Files">
+      <ki-ref link="https://linuxize.com/post/bashrc-vs-bash-profile/">
+        About config files for the Bash shell.
+      </ki-ref>
+    </ki-topic>
+
+    <ki-topic name="Shell Options">
+      <ki-ref link="https://bash.cyberciti.biz/guide/Setting_shell_options">
+        About setting shell options.
+      </ki-ref>
       <ki-ref link="https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin">
-        About using
-        <ki-icode>shopt</ki-icode>
-        to set Bash-specific shell options.
+        About using <ki-icode>shopt</ki-icode> to set Bash-specific shell options.
       </ki-ref>
       <ki-ref link="https://unix.stackexchange.com/questions/32409/set-and-shopt-why-two">
-        About
-        <ki-icode>set</ki-icode>
-        vs.
-        <ki-icode>shopt</ki-icode>
-        .
+        About <ki-icode>set</ki-icode> vs. <ki-icode>shopt</ki-icode>.
       </ki-ref>
       <ki-ref link="https://www.linuxjournal.com/content/globstar-new-bash-globbing-option">
-        About using Bash's
-        <em>globstar</em>
-        option.
+        About using Bash's <em>globstar</em> option.
       </ki-ref>
-    </ki-reflist>
-  </ki-topic>
-  <ki-topic id="shell-scripting" name="Shell Scripting">
-    <ki-reflist>
-      <ki-ref link="https://missing.csail.mit.edu/2020/shell-tools/">Excellent intro tutorial to shell scripting. (MIT lecture)</ki-ref>
-      <ki-ref link="https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html">About making portable shell scripts.</ki-ref>
-      <ki-ref link="https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">
-        Good, concise tutorials about Bash scripting.
-      </ki-ref>
-      <ki-ref link="https://koenwoortman.com/bash-script-data-types/">
-        Article about data types wrt. Bash scripting.
-      </ki-ref>
-    </ki-reflist>
+    </ki-topic>
 
     <ki-topic name="Loops">
       <ki-ref link="https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html">
@@ -114,25 +240,37 @@
         Discussion about resetting the <ki-icode>IFS</ki-icode> variable to its default value.
       </ki-ref>
     </ki-topic>
-  </ki-topic>
-  <ki-topic id="bash-bang" name='Semantics of "!" in Shell/Bash'>
-    <ki-reflist>
+
+    <ki-topic name="Process Substitution">
+      <ki-ref link="https://mywiki.wooledge.org/ProcessSubstitution">
+        Good article about process substitution.
+      </ki-ref>
+    </ki-topic>
+
+    <ki-topic name='Semantics of "!" in Shell/Bash'>
       <ki-ref link="https://stackoverflow.com/questions/68296400/what-does-exclamation-mark-mean-in-linux"></ki-ref>
       <ki-ref link="https://www.baeldung.com/linux/bash-exclamation-mark"></ki-ref>
-    </ki-reflist>
-  </ki-topic>
-  <ki-topic id="bash-history" name="Bash's History Features">
-    <ki-reflist>
+    </ki-topic>
+
+    <ki-topic name="Bash's History Features">
       <ki-ref link="https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps">
         About Bash's history features, including the <ki-icode>history</ki-icode> command, command expansions, history searching and etc.
       </ki-ref>
-    </ki-reflist>
+    </ki-topic>
   </ki-topic>
-  <ki-topic name="Job Control">
-    <ki-ref link="https://missing.csail.mit.edu/2020/command-line/">
-      Excellent lecture about the command-line environment from MIT, which includes a section on job control.
+
+  <ki-topic name="Zsh">
+    <ki-ref link="https://wiki.archlinux.org/title/zsh">
+      <strong>Arch Wiki</strong> - <em>Zsh</em>
+    </ki-ref>
+    <ki-ref link="https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html">
+      <strong>The Z Shell Manual</strong> - <em>Shell Builtin Commands</em>. See command <ki-icode>emulate</ki-icode> for emulation of other shells.
+    </ki-ref>
+    <ki-ref link="https://zsh.sourceforge.io/Doc/Release/Invocation.html#Compatibility">
+      <strong>The Z Shell Manual</strong> - About Zsh's compatibility modes.
     </ki-ref>
   </ki-topic>
+
   <ki-topic name="Data Wrangling">
     <ki-ref link="https://missing.csail.mit.edu/2020/data-wrangling/">
       Excellent lecture about data wrangling from MIT.
@@ -165,37 +303,23 @@
       </ki-ref>
     </ki-topic>
   </ki-topic>
+
   <ki-topic name="GNU Readline Library">
     <ki-ref link="https://www.linuxfromscratch.org/blfs/view/5.1/postlfs/inputrc.html">
       About the <ki-icode>.inputrc</ki-icode> config file for customizing <em>readline</em> related behaviours of programs dependent on that library.
     </ki-ref>
   </ki-topic>
+
   <ki-topic id="less" name="**less**">
     <ki-reflist>
       <ki-ref link="https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/">About "how to use the <ki-icode>less</ki-icode> command on Linux".</ki-ref>
     </ki-reflist>
   </ki-topic>
-  <ki-topic id="xargs" name="**xargs**">
-    <ki-reflist>
-      <ki-ref link="https://linux.die.net/man/1/xargs">Manpage for <ki-icode>xargs</ki-icode>.</ki-ref>
-    </ki-reflist>
-  </ki-topic>
-  <ki-topic id="printf" name="**printf**">
-    <ki-reflist>
-      <ki-ref link="https://linuxize.com/post/bash-printf-command/">Good article explaining how to use <ki-icode>printf</ki-icode>.</ki-ref>
-    </ki-reflist>
-  </ki-topic>
-  <ki-topic name="**getopts**">
-    <ki-ref link="https://en.wikipedia.org/wiki/Getopts">
-      Wikipedia article about <ki-icode>getopts</ki-icode>, contains usage examples and a comparison table for various implementations of <ki-icode>getopts</ki-icode> on different platforms and their feature set.
-    </ki-ref>
-    <ki-ref link="https://www.howtogeek.com/778410/how-to-use-getopts-to-parse-linux-shell-script-options/">
-      Good tutorial about using <ki-icode>getopts</ki-icode>.
-    </ki-ref>
-  </ki-topic>
+
   <ki-topic id="openssl" name="**openssl**">
     <div>See <ki-link path="/infosec#create-sign-certificate-openssl">§ Create and Sign Digital Certificate Using <em>openssl</em></ki-link>.</div>
   </ki-topic>
+
   <ki-topic id="openssh" name="OpenSSH">
     <ki-ref link="https://en.wikipedia.org/wiki/Secure_Shell">
       Wikipedia article about the Secure Shell Protocol (SSH).
@@ -275,6 +399,7 @@
       </ki-ref>
     </ki-topic>
   </ki-topic>
+
   <ki-topic id="git" name="Git">
     <ki-topic id="git-introduction" name="Introduction to and Usage of Git">
       <ki-reflist>
@@ -360,6 +485,7 @@
       </ki-reflist>
     </ki-topic>
   </ki-topic>
+
   <ki-topic name="Vim">
     <ki-ref link="https://missing.csail.mit.edu/2020/editors/">
       Excellent lecture about Vim from MIT.
@@ -419,6 +545,7 @@
       </ki-ref>
     </ki-topic>
   </ki-topic>
+
   <ki-topic name="**tmux**">
     <ki-ref link="https://missing.csail.mit.edu/2020/command-line/">
       Excellent lecture about the command-line environment from MIT, which includes a section on <ki-icode>tmux</ki-icode>.
@@ -430,6 +557,7 @@
       Article about customizing <ki-icode>tmux</ki-icode>.
     </ki-ref>
   </ki-topic>
+
   <ki-topic id="window-to-unix-line-ending" name="Converting Windows line-endings into Unix line-endings">
     <ki-reflist>
       <ki-ref link="https://askubuntu.com/questions/803162/how-to-change-windows-line-ending-to-unix-version">
