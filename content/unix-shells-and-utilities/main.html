@@ -271,6 +271,27 @@
     </ki-ref>
   </ki-topic>
 
+  <ki-topic name="Portable Approaches to Resolve Symlinks">
+    <ki-ref link="https://stackoverflow.com/questions/7665/how-to-resolve-symbolic-links-in-a-shell-script">
+      Discussion about how to resolve symlinks. Answers discuss portability considerations.
+    </ki-ref>
+    <ki-ref link="https://apple.stackexchange.com/questions/4812/how-to-get-the-fully-resolved-path-of-a-symbolic-link-in-terminal">
+      Discussion about how to resolve symlinks on macOS.
+    </ki-ref>
+    <ki-ref link="https://apple.stackexchange.com/questions/450035/is-the-unix-realpath-command-distributed-with-macos-ventura">
+      Discussion about the availability of the <ki-icode>realpath</ki-icode> utility on macOS. Answer suggests that it is available since macOS 13.
+    </ki-ref>
+    <ki-ref link="https://apple.stackexchange.com/questions/464136/which-macos-version-introduced-readlink-f">
+      Discussion about the <ki-icode>-f</ki-icode> option of the <ki-icode>readlink</ki-icode> utility on macOS. Answer suggests that it is available since macOS 12.3.
+    </ki-ref>
+    <ki-ref link="https://man.freebsd.org/cgi/man.cgi?query=readlink&apropos=0&sektion=0&manpath=FreeBSD+8.2-RELEASE&arch=default&format=html">
+      <strong>FreeBSD 8.2 Manual Pages</strong> - <em>readlink</em>. Earliest version of FreeBSD supporting the <ki-icode>-f</ki-icode> option of the <ki-icode>readlink</ki-icode> utility appears to be FreeBSD 8.2.
+    </ki-ref>
+    <ki-ref link="https://man7.org/linux/man-pages/man1/readlink.1.html">
+      Manual page for <em>GNU coreutils</em>'s version of the <em>readlink</em> utility.
+    </ki-ref>
+  </ki-topic>
+
   <ki-topic name="Data Wrangling">
     <ki-ref link="https://missing.csail.mit.edu/2020/data-wrangling/">
       Excellent lecture about data wrangling from MIT.
@@ -408,68 +429,73 @@
         <ki-ref link="https://www.youtube.com/watch?v=SWYqp7iY_Tc"><strong>Traversy Media</strong> - Git &amp; GitHub Crash Course For Beginners</ki-ref>
       </ki-reflist>
     </ki-topic>
-    <ki-topic id="git-merging" name="Git Merging">
-      <ki-reflist>
-        <ki-ref link="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">About branching and merging in Git.</ki-ref>
-        <ki-ref link="https://git-scm.com/docs/git-merge">Manpage for <ki-icode>git merge</ki-icode>.</ki-ref>
-        <ki-ref link="https://www.git-tower.com/learn/git/commands/git-merge/">
-          Short presentation of <ki-icode>git merge</ki-icode> with emphasis on the fact that the target of the "integration (i.e. the branch that receives changes) is always the currently checked out
-          HEAD branch".
-        </ki-ref>
-        <ki-ref link="https://www.atlassian.com/git/tutorials/using-branches/git-merge">About <ki-icode>git merge</ki-icode>.</ki-ref>
-        <ki-ref link="https://github.com/tj/git-extras/blob/master/man/git-merge-into.md">
-          A custom shell command which allows the merging of a source branch into a destination branch that is not the currently checked-out HEAD. It
-          is described as being implemented using the standard commands
-          <ki-icode>git checkout</ki-icode>
-          and
-          <ki-icode>git merge</ki-icode>
-          under the hood.
-        </ki-ref>
-      </ki-reflist>
+
+    <ki-topic name="Git Revisions">
+      <ki-ref link="https://git-scm.com/docs/gitrevisions">
+        Official reference on <em>Git revisions</em>.
+      </ki-ref>
     </ki-topic>
+
+    <ki-topic name="Git Merging">
+      <ki-ref link="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">
+        About branching and merging in Git.
+      </ki-ref>
+      <ki-ref link="https://git-scm.com/docs/git-merge">
+        Manpage for <ki-icode>git merge</ki-icode>.
+      </ki-ref>
+      <ki-ref link="https://www.git-tower.com/learn/git/commands/git-merge/">
+        Short presentation of <ki-icode>git merge</ki-icode> with emphasis on the fact that the target of the "integration (i.e. the branch that receives changes) is always the currently checked out HEAD branch".
+      </ki-ref>
+      <ki-ref link="https://www.atlassian.com/git/tutorials/using-branches/git-merge">
+        About <ki-icode>git merge</ki-icode>.
+      </ki-ref>
+      <ki-ref link="https://github.com/tj/git-extras/blob/master/man/git-merge-into.md">
+        A custom shell command which allows the merging of a source branch into a destination branch that is not the currently checked-out HEAD. It is described as being implemented using the standard commands <ki-icode>git checkout</ki-icode> and <ki-icode>git merge</ki-icode> under the hood.
+      </ki-ref>
+    </ki-topic>
+
     <ki-topic id="git-rebasing" name="Git Rebasing">
       <ki-reflist>
-        <ki-ref link="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Good article explaining "rebasing" in Git.</ki-ref>
+        <ki-ref link="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">
+          Good article explaining "rebasing" in Git.
+        </ki-ref>
         <ki-ref link="https://git-scm.com/docs/git-rebase">
-          Manpage for
-          <ki-icode>git rebase</ki-icode>
-          .
+          Manpage for <ki-icode>git rebase</ki-icode>.
         </ki-ref>
       </ki-reflist>
     </ki-topic>
+
     <ki-topic id="git-rewrite-history" name="Rewriting Git History">
       <ki-reflist>
         <ki-ref link="https://www.atlassian.com/git/tutorials/rewriting-history">
           Good article about some approaches to modify/rewrite a Git repository's history.
         </ki-ref>
         <ki-ref link="https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend">
-          Manpage section about the
-          <ki-icode>--amend</ki-icode>
-          option of the
-          <ki-icode>git commit</ki-icode>
-          command.
+          Manpage section about the <ki-icode>--amend</ki-icode> option of the <ki-icode>git commit</ki-icode> command.
         </ki-ref>
         <ki-ref link="https://stackoverflow.com/questions/9110310/update-git-commit-author-date-when-amending/35515190#35515190">
-          Discussion about various approaches to change the author date when ammending commits using
-          <ki-icode>git commit</ki-icode>
-          .
+          Discussion about various approaches to change the author date when ammending commits using <ki-icode>git commit</ki-icode>.
         </ki-ref>
-        <ki-ref link="https://docs.microsoft.com/en-us/azure/devops/repos/git/git-dates?view=azure-devops">About how dates work in Git.</ki-ref>
+        <ki-ref link="https://docs.microsoft.com/en-us/azure/devops/repos/git/git-dates?view=azure-devops">
+          About how dates work in Git.
+        </ki-ref>
         <ki-ref link="https://git-scm.com/docs/git-commit#_commit_information">
-          <ki-icode>git commit</ki-icode>
-          's manpage section about author and committer information with respect to a commit.
+          <ki-icode>git commit</ki-icode>'s manpage section about author and committer information with respect to a commit.
         </ki-ref>
         <ki-ref link="https://git-scm.com/docs/git-commit#_date_formats">
-          <ki-icode>git commit</ki-icode>
-          's manpage section about date formats used for commits.
+          <ki-icode>git commit</ki-icode>'s manpage section about date formats used for commits.
         </ki-ref>
       </ki-reflist>
     </ki-topic>
+
     <ki-topic id="git-squashing-commits" name="Squashing Commits in Git">
       <ki-reflist>
-        <ki-ref link="https://gitbetter.substack.com/p/how-to-squash-git-commits">Good article about squashing commits in Git.</ki-ref>
+        <ki-ref link="https://gitbetter.substack.com/p/how-to-squash-git-commits">
+          Good article about squashing commits in Git.
+        </ki-ref>
       </ki-reflist>
     </ki-topic>
+
     <ki-topic id="git-checkout-remote-branch" name="Checking Out a Remote Branch With Git">
       <ki-reflist>
         <ki-ref link="https://www.git-tower.com/learn/git/faq/checkout-remote-branch/">
@@ -477,12 +503,31 @@
         </ki-ref>
       </ki-reflist>
     </ki-topic>
+
     <ki-topic id="git-ssh" name="Git Over SSH">
       <ki-reflist>
         <ki-ref link="https://superuser.com/questions/232373/how-to-tell-git-which-private-key-to-use">
           About customizing the authentication process when using git over SSH.
         </ki-ref>
       </ki-reflist>
+    </ki-topic>
+
+    <ki-topic name="**contrib** (Contributed Software)">
+      <ki-ref link="https://github.com/git/git/blob/master/contrib/README">
+        Official explanation of the status and purpose of software under the <ki-icode>contrib</ki-icode> directory of <ki-icode>git</ki-icode>'s source code repository.
+      </ki-ref>
+
+      <ki-topic name="Git Subtree">
+        <ki-ref link="https://www.atlassian.com/git/tutorials/git-subtree">
+          Good tutorial about Git Subtree.
+        </ki-ref>
+        <ki-ref link="https://blog.developer.atlassian.com/the-power-of-git-subtree/">
+          Good tutorial about Git Subtree.
+        </ki-ref>
+        <ki-ref link="https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt">
+          Official Git Subtree help documentation.
+        </ki-ref>
+      </ki-topic>
     </ki-topic>
   </ki-topic>
 
